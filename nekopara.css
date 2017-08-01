@@ -1,0 +1,2329 @@
+@-moz-document domain("search.bilibili.com"), domain("space.bilibili.com"), domain("message.bilibili.com"), regexp("^https?://www.bilibili.com/?(index.html)?"), regexp("^https?://www.bilibili.com/video/av(.*)"), regexp("^https?://www.bilibili.com/account/dynamic/?"), regexp("^https?://bangumi.bilibili.com/(.*)/play#(.*)"), regexp("^https?://www.bilibili.com/watchlater/(.*)") {
+/*********************************通用*********************************/
+html{
+    background-color: transparent;
+}
+body {
+    background-image: url(https://www.tuchuang001.com/images/2017/04/21/zero_12a111.jpg) !important;
+    background-position: center bottom !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+}
+@media screen and (max-width: 1650px){
+    body{
+    		background-image: url(https://www.tuchuang001.com/images/2017/04/21/zero_12a111_small.jpg) !important;
+    }
+}
+/*顶栏*/
+.z_top.white{/*total*/
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 0 0 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 4px 1px;
+}
+.z_top.white .dyn_wnd,
+.z_top.white #dyn_wnd,
+.z_top.white .mini-wnd,
+.z_top.white .s-menu,
+.z_top.white .i_menu{
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+.z_top.white .i_menu .member-bottom{
+    background-color: rgba(244, 245, 247, 0.5) !important;
+}
+.z_top.white #dyn_wnd .dyn_list_wrapper *,
+.z_top.white #dyn_wnd .dyn_list_wrapper[mode]{
+    background-color: transparent !important;
+}
+
+.header .num {/*total*/
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 0 0 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 4px 1px;
+}
+.header .i-link{
+    top: -2px;
+    height: 58px;
+    transition: all 0.2s;
+    border-width: 4px;
+    border-color: transparent;
+    border-style: solid none none none;
+}
+.header .i-link:hover{
+    transform:translateY(-4px);
+    border-color: #FFAFC9;
+}
+.header .i_num{
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 0 0 10px 10px !important;
+    margin-top: 7px;
+}
+.header .m-i.on .i-link{
+    border-color: #FFAFC9 !important;
+    border-bottom-style: none !important;
+}
+.header .i-link em{
+    border-color: transparent !important;
+}
+.menu-wrapper{
+    width: 884px !important;
+}
+.widescreen .menu-wrapper{
+    width: 1055px !important;
+}
+.nav-menu .m-i:nth-last-of-type(1),
+.nav-menu .m-i:nth-last-of-type(2),
+.nav-menu .m-i:nth-last-of-type(3){
+    margin-right: 0 !important;
+    margin-left: 20px !important;
+}
+.nav-menu .m-i:nth-last-of-type(3){
+    margin-left: 8px !important;
+}
+.menu-wrapper .search{
+    margin-right: -52px;
+}
+.menu-wrapper .menu-r,
+.i_div.game,
+.i_div.stream,
+.gif-menu.nav-gif{
+    display: none !important;
+}
+/*新顶栏*/
+.view-later-module{
+    margin-top: 20px;
+}
+.nav-menu{
+    margin-left: 3px;
+}
+.nav-menu .nav-item{
+    background-color: #fff;
+	 border-radius: 24px;
+    margin-left: 0 !important;
+    margin-right: 4px !important;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px 0px;
+    transition: all 0.2s;
+}
+.nav-menu .nav-item:last-child{
+    margin-right: 0 !important;
+}
+.nav-menu .nav-item.side-nav{
+    padding: 0px 10px 0px 10px;
+}
+.nav-menu>.nav-item.home{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nav-menu .sub-nav{
+    border-radius: 8px !important;
+}
+.nav-menu .nav-item:hover{
+    z-index: 100;
+    box-shadow: rgba(255, 175, 201, 0.9) 0px 0px 15px 3px;
+    transform: translateY(5px);
+}
+.nav-menu .nav-item:first-child:hover,
+.nav-menu .nav-item:nth-child(12):hover,
+.nav-menu .nav-item:last-child:hover{
+    transform: none;
+}
+@media screen and (max-width: 1399px){
+    .nav-menu .nav-item.side-nav{
+	    height: 48px !important;
+	}
+    .nav-menu .side-nav .sub-nav{
+	    left: auto !important;
+    	right: 0 !important;
+	}
+}
+@media screen and (min-width: 1400px){
+    .nav-menu{
+	    margin-left: 1px;
+	}
+    .nav-menu .nav-item{
+		 border-radius: 26px;
+	    padding: 2px;
+	    margin-right: 12px !important;
+	}
+    .nav-menu .nav-item.side-nav{
+	    padding: 1px 10px 1px 10px;
+	}
+	.nav-menu>.nav-item.home{
+	    padding-left: 12px;
+	    padding-right: 12px;
+	}
+    .nav-menu .sub-nav{
+	    margin-top: 2px;
+	}
+}
+/*search*/
+.bilibili-suggest{
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+.bilibili-suggest .b-line span{
+    background-color: transparent !important;
+}
+.bilibili-suggest iframe{
+    display: none !important;
+}
+.suggest-item{
+    padding-right: 0 !important;
+    overflow: hidden !important;
+}
+.suggest-item .cancel{
+    height: 29px !important;
+    right: 0;
+    transition: all 0.3s;
+}
+.suggest-item .cancel:hover{
+    right: 38px;
+    width: 0;
+}
+.suggest-item .cancel:after{
+    background-color: #FF3B30;
+    color: white;
+    content: "移除";
+    line-height: 29px;
+    text-align: center;
+    position: absolute;
+    right: -38px;
+    width: 38px;
+    height: 29px;
+}
+.bilibili-suggest .clearall{
+    background-color: #F3F3F3;
+    padding: 2px 5px 2px 5px;
+    border-radius: 10px;
+    color: #BBBBBB !important;
+}
+.bilibili-suggest .clearall:hover{
+    color: #999999 !important;
+}
+/*返回顶部*/
+.n-i.gotop{
+    height: 46px !important;
+	 width: 46px !important;
+    border: 1px !important;
+    border-color: rgb(229,233,239) !important;
+    border-style: solid !important;
+    border-radius: 4px !important;
+    background-color: rgb(246,249,250) !important;
+    margin-top: 9px !important;
+    overflow: hidden !important;
+    transition: all 0.3s;
+}
+.n-i.gotop .btn_gotop{
+    border-width: 0 !important;
+    background-color: transparent !important;
+    transition: margin 0.3s;
+}
+.n-i.gotop:hover{
+    background-color: #00A1D6 !important;
+    border-color: #00A1D6 !important;
+}
+.btn_gotop{
+    height: 46px !important;
+}
+.btn_gotop:after{
+    content: "返回顶部";
+    color: #FFFFFF;
+    width: 27px;
+    line-height: 13px !important;
+    position: absolute;
+    left: 10px;
+    top: 58px;
+    transition: margin 0.3s;
+}
+.n-i.gotop:hover .btn_gotop{
+    margin-top: -48px !important;
+}
+.n-i.gotop:hover :after{
+    margin-top: -48px !important;
+}
+.n-i.gotop .s-line{
+    display: none !important;
+}
+/*尾部*/
+.footer{
+    display: none !important;
+}
+}
+
+@-moz-document domain("bilibili.com") {
+/*字体*/
+/******************************
+ * Google Design          *
+ * https://material.io/icons/ *
+ ******************************/
+@font-face{
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: normal;
+	src: /*[[ustclug]]*/ url(https://fonts-gstatic.proxy.ustclug.org/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+/*滚动条*/
+/*[[scrollbarCssOn]]*/
+::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3) inset;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3) inset;
+    background-color: #999;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #777;
+}
+::-webkit-scrollbar-thumb:active{
+    background-color: #555;
+}
+}
+
+@-moz-document regexp("^https?://www.bilibili.com/?(index.html)?") {
+/***************************************首页**************************************/
+.bili-wrapper{
+    width: 1220px;
+}
+@media screen and (max-width: 1400px){
+.bili-wrapper{
+    width: 1040px;
+}  
+}
+/*顶部*/
+.z-top-container.has-banner .header{
+    border-radius: 0 0 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 1px;
+}
+#home-app{
+    margin-top: 20px;
+}
+/*首页顶部推荐*/
+.chief-recommend-module{
+    margin-top: 20px !important;
+}
+.chief-recommend-module .carousel-box{
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px 2px;
+    margin-left: 30px;
+}
+.chief-recommend-module .recommend-module{
+    padding: 10px 0 10px 0;
+}
+.chief-recommend-module .groom-module{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 2px;
+}
+.rec-btn.next{
+    margin-right: 30px;
+}
+/*首页板块*/
+@keyframes rowDTU{
+    0%{transform: translateY(200px); opacity: 0;}
+    100%{transform: translateY(0); opacity: 1;}
+}
+@keyframes rowUTD{
+    0%{transform: translateY(-200px); opacity: 0;}
+    100%{transform: translateY(0); opacity: 1;}
+}
+.index-promote,
+.popularize-module .r-con .lazy-img{
+    display: none !important;
+}
+.popularize-module,
+.zone-wrap-module,
+.special-recommend-module{
+    border-radius: 15px;
+    background-color: rgba(250, 250, 250, 0.9);
+    padding: 30px 30px 0px 30px !important;
+    margin-bottom: 40px !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 1px;
+    transition: background-color 0.3s;
+    animation-fill-mode: forwards !important;
+}
+.popularize-module:hover,
+.zone-wrap-module:hover,
+.special-recommend-module:hover{
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px 2px;
+}
+.zone-wrap-module a>p.num{
+    background-color: #F7F6F5;    
+}
+.zone-wrap-module:hover a>p.num{
+    background-color: #FFF;
+}
+[data-ad-type],.gg-floor-module,/*去广告*/
+.n-i.n-i-mlink,.app-download/*去首页右侧导航栏尾部小手机*/{
+    display: none !important;
+}
+.popularize-module .online{
+    background-color: rgba(229,233,239,0.7);
+}
+.popularize-module .adpos:after{
+    margin-top: 10px;
+    content: url(https://www.tuchuang001.com/images/2017/04/21/hpg-56016.png);
+    visibility: visible;
+}
+.popularize-module .adpos{
+    height: 200px;
+}
+.special-recommend-module{
+   padding-bottom: 20px !important;
+}
+/*稍后再看*/
+.watch-later-trigger.w-later{
+    background-image: none;
+}
+.watch-later-trigger.w-later:after{
+    font-family: 'Material Icons';
+    content: "\e066";
+    color: #fff;
+    font-size: 22px;
+    line-height: 22px;
+    width: 22px;
+    height: 22px;
+}
+/*右侧导航栏*/
+.nav-list,
+.n-i.gotop{
+    left: 65px;
+}
+.widescreen .nav-list,
+.widescreen .n-i.gotop{
+    left: auto;
+}
+@media screen and (max-width: 1286px) { 
+	 .n-i.gotop{left: auto;}
+}
+.n-i .name{
+    transition-property: background-color !important;
+}
+.n-i.customize{
+    height: 17px !important;
+    overflow: hidden !important;
+}
+.n-i.customize .n-icon-sort{
+    transition: margin 0.3s;
+}
+.n-i.customize p{
+    margin-top: 17px !important;
+}
+.n-i.customize:hover .n-icon-sort{
+    margin-top: -35px !important;
+}
+/*new*/
+.nav-list>.item{
+    transition: all 0.3s;
+}
+.nav-list>.item.on{
+    font-size: 15px;
+}
+.nav-bg{
+    margin-right: -65px;
+}
+.back-top.icon,
+.s-line{
+    left: 65px;
+}
+.nav-list .item.customize{
+    height: 17px !important;
+    overflow: hidden !important;
+    color: #F6F9FA !important;
+}
+.nav-list .item.customize:hover{
+    color: #00A1D6 !important;
+}
+.nav-list .item.customize:after{
+    content: "排序";
+    color: #FFF;
+    line-height: 43px;
+    font-size: 12px;
+    position: relative;
+    left: -12px;
+}
+.nav-list .item.customize .icon{
+    transition: margin 0.3s;
+}
+.nav-list .item.customize:hover .icon{
+    margin-top: -35px !important;
+}
+.back-top.icon{
+    background-image: none;
+    transition: all 0.3s;
+}
+.back-top.icon:before{
+    content: " ";
+    background-image: url(https://www.tuchuang001.com/images/2017/05/20/arrowup1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    transition: all 0.3s;
+}
+.back-top.icon:hover:before{
+    top: -48px;
+    bottom: 48px;
+}
+.back-top.icon:after{
+    content: "返回顶部";
+    color: #FFFFFF;
+    width: 27px;
+    line-height: 13px !important;
+    position: absolute;
+    left: 12px;
+    top: 58px;
+    transition: margin 0.3s;
+}
+.back-top.icon:hover:after{
+    margin-top: -47px;
+}
+/*尾部*/
+.footer {
+    background-color: rgba(246, 249, 250, 0.95) !important;
+    border-radius: 15px 20px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 4px 1px;
+    padding-bottom: 10px !important;
+    display: block !important;
+}
+.footer .footer-wrp {
+    background-color: transparent !important;
+}
+}
+
+@-moz-document regexp("^https?://www.bilibili.com/watchlater/#/list(.*)") {
+/*************************************稍后再看************************************/
+.watch-later-list>header{
+    margin-bottom: 40px;
+}
+.av-about{
+    border: none !important;
+}
+.av-item.clearfix{
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0 20px 0 0 !important;
+    margin-bottom: 30px !important;
+    border-radius: 15px;
+    transition: all 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
+.av-item.clearfix:hover{
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 7px;
+}
+.av-about{
+    margin-top: 10px;
+    height: 90px !important;
+}
+.av-item.clearfix>a{
+    border-radius: 15px 0 0 15px !important;
+}
+.av-item.clearfix>a .lazy-img img{
+    transition: all 0.2s;
+}
+.av-item.clearfix:hover>a .lazy-img img{
+    width: 176px;
+    height: 110px;
+    margin-left: -8px;
+    margin-top: -5px;
+}
+.av-item.clearfix .key{
+    z-index: 100;
+    width: 44px !important;
+    color: #fff !important;
+    background-color: #4879bd;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px 0;
+    top: -12px !important;
+    left: -22px !important;
+    transition: transform 0.2s;
+}
+.av-item.clearfix:hover .key{
+    transform: rotate(-10deg);
+}
+.info>.state{
+    margin-top: -10px !important;
+}
+.info>.state:before{
+    content: "删除";
+    color: #99a2aa;
+    position: relative;
+    top: 1px;
+    right: 10px;
+    opacity: 0;
+    transition: all 0.2s;
+}
+.info>.state:hover:before{
+    right: 0;
+    opacity: 1;
+}
+}
+
+@-moz-document regexp("^https?://www.bilibili.com/video/av(.*)"), regexp("^https?://www.bilibili.com/(.*)/html5player.html(.*)"), regexp("^https?://www.bilibili.com/watchlater/#/av(.*)") {
+/*播放器相关*/
+.bilibili-player-video-message{
+    height: 0 !important;
+    display: none !important;
+}
+.gray-panel-content{
+    padding: 5px;
+    background-color: rgba(255,255,255,0.8);
+}
+.bilibili-player-video-inputbar .bilibili-player-video-hint a{
+    background-color: #d5d5d5;
+    padding: 2px 5px 2px 5px;
+    border-radius: 4px;
+}
+.bpui-slider-handle:after{
+    width: 28px;
+    height: 28px;
+    top: -7px;
+    left: -7px;
+    position: absolute;
+    content: "";
+    line-height: 28px;
+    background: url(https://www.tuchuang001.com/images/2017/04/21/neko.png) no-repeat;
+}
+.bilibili-player-video-btn-send.bpui-button{
+    overflow: hidden;
+}
+.bilibili-player-video-btn-send.bpui-button:after{
+    font-family: 'Material Icons';
+    content: "\e163";
+    font-size: 20px;
+    position: absolute;
+    left: -33px;
+    top: 0px;
+    color: #FFF;
+    line-height: 28px;
+    transition: all 0.3s;
+}
+.bilibili-player-video-btn-send.bpui-button:hover{
+    animation: words_in_out 0.6s;
+}
+.bilibili-player-video-btn-send.bpui-button:hover:after{
+    animation: in_out_2 0.6s;
+}
+.bilibili-player-video-btn-send.bpui-button.button.bpui-state-disabled:hover{
+    animation: none !important;
+}
+.bilibili-player-video-btn-send.bpui-button.button.bpui-state-disabled:hover:after{
+    animation: none !important;
+}
+@keyframes in_out_2
+{
+	 0% {left:-33px;}
+	 40% {left:19px;}
+	 60% {left:27px;}
+	 100% {left:73px;}
+}
+/*你闪个毛（。*/
+.bilibili-player-video-float-panel{
+    margin-top: auto !important;
+}
+/*网页全屏播放器侧边栏*/
+@keyframes fade_out{
+    0% {opacity: 1;}
+    30% {opacity: 1;}
+    55% {opacity: 0.7;}
+    80% {opacity: 0.7;}
+    100% {opacity: 0;}
+}
+.mode-webfullscreen .bilibili-player-auxiliary-area,
+.mode-fullscreen .bilibili-player-auxiliary-area{
+    right: 0;
+    z-index: 100;
+    transition: all 0.2s;
+    display: inline-block !important;
+    opacity: 0;
+    animation: fade_out 4s;
+}
+.mode-webfullscreen .bilibili-player-auxiliary-area:before,
+.mode-fullscreen .bilibili-player-auxiliary-area:before{
+    content: url(https://www.tuchuang001.com/images/2017/05/10/right-button.png);
+    /*background-image: url(https://www.tuchuang001.com/images/2017/05/07/right-button3.png);
+    background-position: right center;
+    background-repeat: no-repeat;*/
+    position: fixed;
+    top: calc(50% - 50px);
+    height: 100px;
+    right: 0;
+    width: 15px;
+    transition: all 0.2s;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) -1px 0px 2px 0px;
+}
+.mode-webfullscreen .bilibili-player-auxiliary-area:after,
+.mode-fullscreen .bilibili-player-auxiliary-area:after{
+    content: " ";
+    position: fixed;
+    top: calc(50% - 100px);
+    height: 200px;
+    right: 0;
+    width: 50px;
+}
+.mode-webfullscreen .bilibili-player-auxiliary-area:hover:after,
+.mode-fullscreen .bilibili-player-auxiliary-area:hover:after{
+    display: none !important;
+}
+.mode-webfullscreen .bilibili-player-auxiliary-area .bilibili-player-wraplist{
+    height: calc(100% - 92px);
+}
+.mode-webfullscreen .bilibili-player-filter-wrap.bilibili-player-danmaku{
+    height: 100%;
+}
+.mode-webfullscreen .bilibili-player-danmaku-wrap.mCustomScrollbar._mCS_3.mCS-autoHide{
+    height: calc(100% - 71px) !important;
+}
+.mode-webfullscreen .bilibili-player-panel-scrollbar.mCustomScrollbar._mCS_6.mCS-autoHide{
+    height: 100% !important;
+}
+.mode-webfullscreen .bilibili-player-auxiliary-area:before{
+    top: calc(50% - 50px - 34px);
+}
+.mode-webfullscreen .bilibili-player-auxiliary-area:after{
+    top: calc(50% - 100px - 34px);
+}
+.mode-webfullscreen .bilibili-player-auxiliary-area:hover:before,
+.mode-fullscreen .bilibili-player-auxiliary-area:hover:before{
+    right: 299px;
+}
+.mode-webfullscreen .bilibili-player-auxiliary-area:hover,
+.mode-fullscreen .bilibili-player-auxiliary-area:hover{
+    right: 300px;
+    opacity: 1 !important;
+    animation: none !important;
+}
+.mode-webfullscreen .bilibili-player-auxiliary-area{
+    height: calc(100% - 68px);
+}
+/*全屏模式底部进度条调整*/
+.mode-fullscreen .bilibili-player-video-control:before{
+    content: " ";
+    position: fixed;
+    left: 215px;
+    right: 0;
+    bottom: 0;
+    height: 20%;
+    z-index: -1;
+}
+.mode-fullscreen .bilibili-player-video-control{
+    opacity: 0 !important;
+    transition: opacity 0.2s;
+}
+.mode-fullscreen .bilibili-player-video-control:hover{
+    opacity: 1 !important;
+}
+.mode-fullscreen .bilibili-player-video-sendbar{
+    border-radius: 4px;
+    z-index: 70 !important;
+}
+.mode-fullscreen .bilibili-player-video-sendbar .bilibili-player-video-inputbar{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.mode-fullscreen .bilibili-player-video-btn.bilibili-player-video-btn-danmaku{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.mode-fullscreen .bilibili-player-mode-selection-container,
+.mode-fullscreen .bilibili-player-color-picker-container{
+    border-radius: 4px;
+}
+/*去广告*/
+.bilibili-player-promote-wrap{
+    display: none !important;
+}
+}
+
+@-moz-document regexp("^https?://www.bilibili.com/video/av\\d(.*)"), regexp("^https?://bangumi.bilibili.com/(.*)/play#(.*)"), regexp("^https?://www.bilibili.com/watchlater/#/av(.*)") {
+/******************************视频播放界面通用******************************/
+/*顶栏*/
+.nav-menu{
+    border-color: transparent !important;;
+}
+/*信息*/
+.viewbox,
+.video-top-info{
+    background-color: #FFFFFF !important;
+    margin-top: 25px !important;
+    padding: 0 15px 12px 15px !important;
+    border-radius: 15px;
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px;
+}
+.video-top-info{
+    padding-bottom: 0px !important;
+    width: 950px;
+}
+@media screen and (min-width: 1400px){
+    .video-top-info{width: 1130px;}
+}
+.viewbox .info,
+.video-info-module{
+    width: 635px !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+.widescreen .viewbox .info,
+.widescreen .video-info-module{
+    width: 815px !important;
+}
+.viewbox .v-title-line.v-rank{
+    background-color: #F3F3F3 !important;
+    padding: 0 4px 0 7px !important;
+    margin-right: 15px !important;
+    border-radius: 16px;
+}
+.viewbox .v-title h1,
+.video-info-module h1{
+    margin-right: 94px !important;
+}
+.viewbox .v-title-line.v-rank .b-icon.b-icon-rank{
+    height: 26px !important;
+}
+/*播放器外观*/
+.player-wrapper,
+.scontent.float,
+.video-box-module{
+	 background-color: transparent !important;
+    border: none !important;
+}
+.scontent{
+    background-color: #FFFFFF !important;
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px !important;
+}
+.scontent.float .player{
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px !important;
+}
+.scontent.float,
+.scontent.float .bilibili-player-video-danmaku{
+    box-shadow: none !important;
+}
+.scontent.newfloat{
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+.scontent.newfloat .move{
+    transition: opacity 0.2s;
+    display: block !important;
+    opacity: 0;
+}
+.scontent.newfloat:hover .move{
+    opacity: 1;
+}
+.scontent.newfloat .player{
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px !important;
+}
+/*评论*/
+.v_large .common{
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    padding: 0 15px 15px 15px !important;
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+    border-radius: 15px;
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px;
+    transition: background-color 0.3s;
+}
+.v_large .common:hover{
+    background-color: rgba(255, 255, 255, 1) !important;
+}
+.v_large .bilibili-comment.pc,
+.bb-comment{
+    background-color:transparent !important;
+}
+.c_order a{
+    transition: color 0.3s;
+}
+.comment-submit{
+    transition: all 0.3s !important;
+    overflow: hidden;
+}
+.comment-submit:hover{
+    animation: words_in_out 0.5s;
+}
+.comment-submit:hover:after{
+    animation: in_out 0.5s;
+}
+.comment-submit:after{
+    font-family: 'Material Icons';
+    content: "\e163";
+    font-size: 35px;
+    position: absolute;
+    left: -57px;
+    top: 0px;
+    color: #FFF;
+    line-height: 64px;
+    transition: all 0.3s;
+}
+@keyframes in_out
+{
+	 0% {left:-47px;}
+	 40% {left:13px;}
+	 60% {left:21px;}
+	 100% {left:67px;}
+}
+@keyframes words_in_out
+{
+	 0% {color: #FFF;}
+	 50% {color: rgb(0,181,229);}
+	 100% {color: #FFF;}
+}
+/*mini on/off*/
+#miniPlayerSwitch{
+    height: 46px;
+    line-height: 23px;
+}
+/*去广告*/
+#loli,/*屏蔽已经失效的lolivector*/
+.ad-f,
+.ad{
+    display: none !important;
+}
+}
+
+@-moz-document regexp("^https?://www.bilibili.com/video/av\\d(.*)"), regexp("^https?://www.bilibili.com/watchlater/#/av(.*)") {
+/*****************************视频播放界面(av)*****************************/
+/*信息*/
+.viewbox .upinfo{
+    margin-top: 15px !important
+}
+/*播放器调整兼容*/
+.player-wrapper{
+    width: 1160px ;/*[[wideNo]]*/
+}
+.player-wrapper{
+    width: 980px;
+    margin: auto;
+    margin-bottom: 0 !important;
+}
+.widescreen .player-wrapper{
+    width: 1160px;
+    margin: auto;
+    margin-bottom: -60px !important;
+}
+/*arc-toolbar*/
+.arc-toolbar{
+    background-color: transparent !important;
+    border-style: none !important;
+    padding-top: 10px;
+    height: 409px;
+    width: 200px !important;
+    margin-left: 100% !important;
+    margin-bottom: -450px !important;
+    top: -449px;
+}
+.widescreen .arc-toolbar{
+    height: 484px;
+    top: -524px;
+}
+.arc-toolbar .b-icon-a,
+.arc-toolbar .helper .t .icon,
+.bgray-btn-wrap .bgray-btn.show/*意见反馈*/{
+    display: none !important;
+}
+.widescreen .bgray-btn-wrap .bgray-btn.show{
+    display: block !important;
+}
+#adjust-player-config-btn/*播放器调整*/{
+    display: block !important;
+}
+/*share-tool-bar*/
+.arc-toolbar .share-tool-bar{
+    border-style: none !important;
+    height: 40px !important;
+    left: 20px;
+    width:0;
+}
+.arc-toolbar .share-tool-bar .drawer{
+    padding: 0;
+    width: 0;
+    overflow: hidden !important;
+}
+.arc-toolbar .share-tool-bar:hover{
+    width: 204px;
+}
+.arc-toolbar .share-tool-bar:hover .drawer{
+    width: auto;
+}
+.arc-toolbar .share-tool-bar .drawer{
+    height: 40px !important;
+}
+.arc-toolbar .share-tool-bar .arrow,
+.arc-toolbar .share-tool-bar:after{
+    display: none !important;
+}
+.arc-toolbar .share-box{
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 10px !important;
+    top: -100% !important;
+    right: calc(100% + 40px) !important;
+    left: auto !important;
+}
+.arc-toolbar .share-tool-bar .share-btn-bar{
+    top: -1px;
+    height: 42px;
+    width: 0;
+    position: absolute;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+.arc-toolbar .share-tool-bar:hover .share-btn-bar{
+    width: 180px;
+    padding-left: 5px;
+}
+.arc-toolbar .share-tool-bar .g-share-btn{
+    margin: 0 0 0 -42px !important;
+    transition: margin 0.22s;
+}
+.arc-toolbar .share-tool-bar .g-share-btn:first-of-type{
+    margin-left: 0 !important;
+}
+.arc-toolbar .share-tool-bar:hover .g-share-btn{
+    margin-left: 0 !important;
+}
+/*share-tool-bar_end*/
+.arc-toolbar .share-tool-bar:before,
+.arc-toolbar .fav .t:before,
+.arc-toolbar .app.initialized .t:before,
+.arc-toolbar .helper .t:before,
+.arc-toolbar .watch-later .t:before{
+    font-family: 'Material Icons';
+    font-size: 43px;
+    position: absolute;
+    left: -27px;
+    top: -11px;
+    color: #FFF;
+    line-height: 62px;
+    text-indent: 8px;
+    width: 60px;
+    height: 60px;
+    background-color: #4879BD;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 7px;
+    transition: transform 0.3s;
+    z-index: 10;
+}
+.arc-toolbar .share-tool-bar:before{
+    content: "\e80d";
+}
+.arc-toolbar .fav .t:before{
+    content: "\e838";
+}
+.arc-toolbar .app.initialized .t:before{
+    content: "\e32c";
+}
+.arc-toolbar .helper .t:before{
+    content: "\e869";
+}
+.arc-toolbar .watch-later .t:before{
+    content: "\e066";
+}
+.arc-toolbar .watch-later .t-right-top{
+    width: 80px;
+}
+.arc-toolbar .coin .t:before{
+    font-family: '黑体';
+    content: "币";
+    font-size: 35px;
+    position: absolute;
+    left: -27px;
+    top: -11px;
+    color: #FFF;
+    line-height: 62px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    background-color: #4879BD;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 7px;
+    transition: transform 0.2s;
+    z-index: 10;
+}
+.arc-toolbar .t-right-top,
+.arc-toolbar .share-tool-bar .title{
+    line-height: 30px !important;
+    height: 30px !important;
+}
+.arc-toolbar .t,
+.arc-toolbar .share-tool-bar{
+    padding: 0 0 4px 0 !important;
+    margin-left: 20px !important;
+    background-color: #FFF;
+    border-radius: 0 22px 22px 0 !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px !important;
+    transition: all 0.2s;
+}
+.arc-toolbar .block .t .t-right{
+    width: 0 !important;
+    overflow: hidden;
+}
+.arc-toolbar .block:hover .t,
+.arc-toolbar .share-tool-bar:hover{
+    padding: 0 20px 4px 45px !important;
+}
+.arc-toolbar .block:hover .t .t-right{
+    width: auto !important;
+}
+.arc-toolbar .block{
+    overflow: visible !important;
+    height: 60px;
+    border-style: none !important;
+    box-shadow: none !important;
+    padding: 0 20px 0 20px !important;
+}
+.arc-toolbar .block:hover .t:before,
+.arc-toolbar .share-tool-bar:hover:before,
+.arc-toolbar .elecrank-btn:hover .elecrank-bg:before{
+    transform:scale(1.16);
+}
+.arc-toolbar .app.initialized:hover{
+    background-color: transparent !important;
+    border-style: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+}
+.arc-toolbar .app.initialized:after{
+    border-style: none !important;
+}
+.arc-toolbar .elecrank-btn{
+    background-color: #FFF !important;
+    border-style: none !important;
+    padding: 3px 0px 3px 0;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
+    border-radius: 0 22px 22px 0;
+    width: 0 !important;
+    position: absolute !important;
+    right: auto !important;
+    top: auto;
+    bottom: 0;
+    left: 40px;
+    transition: all 0.2s;
+}
+.arc-toolbar .elecrank-bg{
+    margin-left: 0;
+    left: -27px;
+    z-index: 10;
+    background-image: none !important;
+}
+.arc-toolbar .elecrank-btn span{
+    position: relative;
+    opacity: 0;
+    display: none !important;
+}
+.arc-toolbar .elecrank-btn:hover{
+    padding-left: 25px !important;
+    width: 120px !important;
+}
+.arc-toolbar .elecrank-btn:hover span{
+    display: block !important;
+    animation: go_out 0.2s forwards;
+}
+@keyframes go_out{
+    0% {opacity: 0;}
+    40% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.arc-toolbar .elecrank-bg:before{
+    font-family: 'Material Icons';
+    content: "\e1a3";
+    font-size: 43px;
+    position: absolute;
+    left: 0px;
+    top: 9px;
+    color: #FFF;
+    line-height: 62px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(240,105,145);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 7px;
+    transition: transform 0.3s;
+}
+.qr-code-box,
+.arc-toolbar .helper .info{
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 10px !important;
+    top: -100% !important;
+    right: 100% !important;
+    left: auto !important;
+}
+.arc-toolbar .helper .info{
+    top: -205px !important;
+}
+/*按钮位置*/
+.arc-toolbar .share-tool-bar{
+    padding-left: 20px;
+    position: absolute;
+    top: 0;
+}
+.arc-toolbar .fav{
+    position: absolute;
+    top: 75px;
+}
+.arc-toolbar .coin{
+    position: absolute;
+    top: 150px;
+}
+.arc-toolbar .watch-later{
+    position: absolute;
+    top: 225px;
+}
+.arc-toolbar .app.initialized{
+    position: absolute;
+    top: 300px;
+}
+.arc-toolbar .helper/*bilibili helper*/{
+    position: absolute;
+    top: 300px;
+}
+.widescreen .arc-toolbar .helper{
+    top: 375px;
+}
+.arc-toolbar .elecrank-btn{
+    bottom: 0;
+}
+/*bilibili helper*/
+.arc-toolbar .helper .t{
+    height: 40px;
+}
+.arc-toolbar .helper .t:before{
+    font-size: 38px;
+    text-indent: 10px;
+}
+.fav-wnd{
+    left: auto !important;
+    right: 200px !important;
+}
+.m-layer.m_layer.m-button.m-coin{
+    margin-left: -350px;
+    margin-top: -200px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+/*比赛视频信息*/
+.inside-wrp{
+    background-color: rgba(255, 255, 255, 0.95);
+    border-style: none !important;
+    border-radius: 15px !important;
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px !important;
+    transition: background-color 0.3s;
+    margin: 0 0 30px 0 !important;
+}
+/*视频简介*/
+.v_info,
+.ex-wrapper{
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px !important;
+    border-radius: 15px;
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px !important;
+    transition: background-color 0.3s;
+}
+.v_large .recommend-area{
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 20px 20px 20px !important;
+    border-radius: 15px;
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px !important;
+    transition: background-color 0.3s;
+    margin-top: 20px !important;
+}
+.rm-list{
+    transition: margin-left 0.3s;
+    opacity: 1 !important;
+}
+.widescreen .rm-list li{
+    margin-right: 8px !important;
+}
+.rm-list li{
+    margin-right: 3.2px !important;
+}
+.v_large .recommend-area .b-head{
+    padding-left: 17px !important;
+}
+.v_large .recommend-area .page.next.no-select{
+    right: 0 !important;
+}
+.v_large .recommend-area .page.prev.no-select{
+    left: 0 !important;
+}
+.inside-wrp:hover,
+.v_info:hover,
+.v_large .recommend-area:hover{
+    background-color: rgba(255, 255, 255, 1);
+}
+.v_info .intro{
+    border-bottom-style: none !important;
+}
+/*新wapper*/
+.ex-wrapper{
+    width: 830px !important;
+}
+.also-like__page.also-like__page--pre{
+    left: 0;
+}
+.also-like__page.also-like__page--next{
+    right: 0;
+}
+.spread-module.also-like__card{
+    margin-right: 7.5px; 
+}
+@media screen and (max-width: 1400px){
+    .ex-wrapper{
+    	width: 650px !important;
+	}
+	.spread-module.also-like__card{
+	    margin-right: 3px; 
+	}
+    .also-like__page.also-like__page--next{
+	    right: 1px;
+	}
+}
+/*新侧栏*/
+.side-info-wrapper{
+    padding-top: 0;
+    padding-left: 20px;
+}
+/*充电*/
+.v_small .elecrank-header,
+.v_small .elecrank-content,
+.v_small .elecrank-footer,
+.elecrank-header,
+.elecrank-content,
+.elecrank-footer{
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+.elecrank-wrapper{
+    padding-top: 0;
+}
+.v_small .elecrank-header a:first-child,
+.elecrank-header a:first-child{
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    transition: color 0.3s;
+    margin-top: -3px;
+}
+.no-list-icon{
+    background-image: none !important;
+}
+.no-list-icon:after{
+    content: url(https://www.tuchuang001.com/images/2017/04/21/nlb-56052.png);
+}
+/*大家围观的直播*/
+.v_small .v-live-recommend{
+    padding: 10px 0 0 0 !important;
+    margin: 0 0 0 10px !important;
+    width: 258px !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 15px;
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px;
+}
+.v_small .v-live-recommend .b-head{
+    left: 10px !important;
+    top: 8px !important;
+}
+.v_small .v-live-recommend .lv-item{
+    border-style: none !important;
+}
+/*notfound*/
+.b-page-body .z-msg-box .bg{
+    background-image: url(https://www.tuchuang001.com/images/2017/04/30/notfound.png);
+}
+/*360chrome bug*/
+.a_layer .bg .arrow.arrow_r{
+    right: 0;
+}
+/*setting*/
+/*[[recommendAreaYes]]*/
+/*[[vLiveRecommendYes]]*/
+}
+
+@-moz-document regexp("^https?://bangumi.bilibili.com/(.*)/play#(.*)") {
+/***************************视频播放界面(bangumi)***************************/
+/*顶部承包*/
+.topview-sponsor{
+    margin-top: 20px;
+}
+.t-sponsor-img{
+    background-image: url(https://www.tuchuang001.com/images/2017/04/21/topview-sponsor.png);
+    background-size: contain;
+    width: 150px;
+    height: 110px;
+    left: -35px;
+    top: -10px;
+}
+/*番剧信息、承包榜*/
+.v1-bangumi-info-wrapper,
+.sponsor-content-wrapper.clearfix{
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    padding: 15px !important;
+    margin-top: 25px !important;
+    margin-bottom: 10px !important;
+    border-style: none;
+    border-radius: 15px;
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px;
+    transition: background-color 0.3s;
+}
+.v1-bangumi-info-wrapper:hover,
+.sponsor-content-wrapper.clearfix:hover{
+    background-color: rgba(255, 255, 255, 1) !important;
+}
+.v1-order-btn{
+    transition: background-color 0.2s;
+}
+.v1-order-btn:hover{
+    background-color: rgb(255,135,174) !important;
+}
+.subscribed .v1-order-btn:hover{
+    background-color: transparent !important;
+}
+.slider-prev{
+    left: -10px !important;
+}
+.slider-next{
+    right: -10px !important;
+}
+.slider-prev,
+.slider-next{
+    opacity: 0.3;
+}
+.slider-prev:hover,
+.slider-next:hover{
+    opacity: 1;
+}
+.sponsor-content-right{
+    width: 240px;
+}
+.sponsor-tosponsor-img img{
+    display: none !important;
+}
+.sponsor-tosponsor-img{
+    background-image: url(https://www.tuchuang001.com/images/2017/04/21/chengbao.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100% !important;
+}
+/*相关视频推荐*/
+.recom{
+    padding: 0 0 0 15px !important;
+    margin: 20px 0 0 0 !important;
+    width: 258px !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 15px;
+    box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px;
+}
+}
+
+@-moz-document regexp("^https?://www.bilibili.com/account/dynamic/?") {
+/**************************************动态**************************************/
+.z_top.white .nav-search{
+    width: 220px !important;
+}
+.z_top.white .nav-search .nav-search-keyword{
+    width: 178px !important;
+}
+/*左侧个人信息*/
+.sd.l .sec {
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 0px;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    transition: background-color 0.3s;
+}
+.sd.l .sec:hover{
+    background-color: rgba(255, 255, 255, 1) !important;
+}
+.sd.l .sec .usr {
+    border-radius: 15px 15px 0 0;
+    background-color: transparent !important;
+}
+.sd.l.float {
+    padding: 15px !important;
+    margin-left: -505px !important;
+    z-index: 10 !important;
+}
+.sd.l .sd-l a{
+    color: rgba(72,121,189,1) !important;
+}
+.sd.l .sd-l a:hover{
+    color: #FFFFFF !important;
+    background-color: rgba(72,121,189,1) !important;
+}
+.info,
+.info .status {
+    background-color: transparent !important;
+}
+.sec[style="padding-bottom: 18px;"] {
+    display: none !important;
+}
+.sd-l a{
+    transition: background-color 0.2s;
+}
+/*上部标签*/
+.ct.dyn-tab {
+    background-color: #FFFFFF !important;
+    margin-bottom: 30px !important;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 0px;
+}
+.ct.dyn-tab li {
+    height: 50px !important;
+}
+/*list*/
+.ct,
+.stm-lst {
+    border-width: 0 !important;
+    background-color: transparent !important;
+}
+.stm-lst li {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 0px;
+    transition: background-color 0.3s;
+    height: 175px;
+}
+.stm-lst li:hover {
+    background-color: rgba(250, 250, 250, 0.95);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
+}
+.stm-lst li .vb{
+    height: auto !important;
+}
+.stm-lst li .vb a{
+    width: 182px !important;
+    height: 112px !important;
+}
+.stm-lst li .cvr{
+   transition: all 0.2s;
+}
+.stm-lst li:hover .cvr{
+    width: 110% !important;
+    height: 110% !important;
+    margin-left: -9.1px !important;
+    margin-top: -5.6px !important;
+}
+.stm-lst li .share {
+    display: none !important;
+}
+.rside .name{
+    padding-bottom: 0px !important;
+}
+.rside .hint,
+.rside .desc{
+    margin-left: 200px;
+}
+.rside .vb{
+    position: absolute !important;
+    margin-top: 46px !important;
+    border-radius: 10px;
+    top: 0px;
+}
+.rside .vb img{
+    margin: 0 !important;
+}
+}
+
+@-moz-document regexp("^https?://search.bilibili.com/?") {
+/*搜索首页*/
+.search-b-hotSearch,
+.search-b-searchHistory{
+    background-color: #FFF;
+    height: 360px !important;
+}
+.footer{
+    display: none !important;
+}
+}
+
+@-moz-document regexp("^https?://search.bilibili.com/(.+)") {
+/***************************************搜索***************************************/
+/*search*/
+.distort,
+.search-logo,
+#search-button span{
+    display: none !important;
+}
+#search-button{
+    width: 32px !important;
+    height: 32px !important;
+}
+.js-search-wrap{
+    width: 160px !important;
+    height: 32px !important;
+    margin: auto;
+    z-index: 10001 !important;
+    text-align: center;
+    position: relative;
+    top: -37px;
+    left: 25px;
+}
+.js-search-wrap:hover #search-keyword{
+    border-color: rgb(0,161,214) !important;
+}
+#search-wrap{
+    margin-top: 0;
+    height: 100%;
+}
+#header-search,
+#header-search .logo-input{
+    width: auto !important;
+    height: 100% !important;
+}
+#search-block{
+    position: static !important;
+    width: auto !important;
+    height: 100% !important;
+}
+#search-block .input-wrap{
+    height: 32px !important;
+    width: calc(100% - 32px) !important;
+    margin-right: 0 !important;
+}
+#search-keyword{
+    padding: 5px 42px 5px 10px !important;
+    height: 20px !important;
+    width: calc(100% - 22px) !important;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.2s;
+    z-index: 0;
+}
+.icon-search-white{
+    height: 32px !important;
+    margin-top: 0 !important;
+    position: relative;
+    z-index: 1;
+}
+/**/
+.history-wrap .title{
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.vertical-text.history.fake-a{
+    padding-left: 12px !important;
+    padding-right: 0 !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    /*overflow: hidden !important;*/
+}
+.vertical-text.history.fake-a .clear{
+    background-position: -177px -216px !important;
+    height: 30px !important;
+    width: 38px !important;
+    top: 0 !important;
+    right: 0;
+    transition: right 0.3s;
+}
+.vertical-text.history.fake-a .clear:hover{
+    right: 38px;
+    background-image: none;
+}
+.vertical-text.history.fake-a .clear:after{
+    background-color: #FF3B30;
+    color: white;
+    content: "移除";
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    right: -38px;
+    width: 38px;
+    height: 30px;
+}
+/*顶部*/
+.distort{
+    border-radius: 0 0 20px 20px;
+}
+.nav-sub{
+    background-color: rgba(255,255,255,0.95) !important;
+    border-radius: 15px 20px 0 0;
+    padding: 0 10px 0 10px !important;
+}
+.nav-sub .wrap .sub{
+    transition: all 0.2s;
+    width: 46px !important;
+}
+/*.nav-sub .wrap .sub[data-href="/drawyoo"]{
+    margin-right: 0 !important;
+}*/
+.nav-sub .wrap .sub:hover{
+    font-size: 19px !important;
+}
+.nav-sub .wrap .hover-bar{
+    width: 46px !important;
+    height: 3px !important;
+    margin-left: 7px;
+    z-index: 100;
+    bottom: -4px;
+}
+.so-wrap{
+    width: 998px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+.so-wrap .so-info{
+    background-color: rgba(255,255,255,0.95) !important;
+    margin-top: 0 !important;
+    padding: 10px 10px 0 10px !important;
+    width: 978px !important;
+}
+.so-wrap .so-info .switch{
+    right: 10px !important;
+    top: 10px !important;
+}
+.so-wrap .filter-block{
+    margin: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    background-color: rgba(255,255,255,0.95) !important;
+    border-radius: 0 0 20px 20px;
+    transition: all 0.8s;
+}
+.so-wrap .filter-block .fold{
+    right: 10px;
+}
+/*all*/
+.ajax-render{
+    margin-top: 30px;
+}
+/*综合*/
+.synthetical-live,
+.synthetical-movies{
+    border-style: none !important;
+}
+.room-special{
+    background-color: rgba(255,255,255,0.9) !important;
+    padding: 0 15px 0 172px !important;
+    margin: 30px 0 15px 0 !important;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
+    overflow: hidden !important;
+    transition: all 0.3s;
+}
+.room-special:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 7px;
+    background-color: rgba(255,255,255,1) !important;
+}
+.room-special .left-img{
+	 border-radius: 0 !important;
+}
+.room-special .right-info{
+    position: relative;
+    top: 11px;
+}
+.live-more,
+.bangumi-more,
+.pgc-more{
+    color: #BBBBBB !important;
+    background-color: #F3F3F3 !important;
+    padding: 4px 8px 4px 8px !important;
+    margin: 0 0 27px 750px !important;
+    text-align: center !important;
+    border-radius: 10px;
+}
+/*视频格子*/
+.video.matrix{
+    background-color: rgba(255,255,255,0.9) !important;
+    border-radius: 10px;
+    border-style: none !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+    transition: all 0.3s;
+	 margin-right: 39.5px !important;
+} 
+.matrix.video:nth-of-type(5),
+.matrix.video:nth-of-type(10),
+.matrix.video:nth-of-type(15),
+.matrix.video:nth-of-type(20){
+    margin-right: 0 !important;
+}
+.video.matrix .img{
+    border-radius: 10px 10px 0 0;
+    height: 104px;
+}
+.video.matrix .img img{
+    margin-top: -1px !important;
+    width: 100%;
+    height: 101%;
+    transition: all 0.2s;
+}
+.video.matrix:hover{
+    background-color: rgba(255,255,255,1) !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 7px;
+}
+.video.matrix:hover .img img{
+    width: 110%;
+    height: 111.1%;
+    margin-left: -8.4px !important;
+    margin-top: -5.2572px !important;
+}
+/*视频列表*/
+.so-wrap .ajax-render{
+    width: auto !important;
+}
+.so-wrap .ajax-loading{
+    background: transparent !important;
+}
+.video.list{
+	 background-color: rgba(255,255,255,0.9) !important;
+    margin: 15px 0 15px 0 !important;
+    padding: 0 0 0 160px !important;
+    border-radius: 10px;
+    border-style: none !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+    transition: all 0.3s;
+    width: auto !important;
+}
+.video.list .info{
+    padding-top: 8px !important;
+    padding-left: 20px !important;
+}
+.video.list .info .headline{
+    margin-bottom: -4px !important;
+}
+.video.list .info .des.hide{
+    margin-top: 10px !important;
+}
+.video.list .info .tags{
+    left: 182px !important;
+    bottom: 3px !important;
+}
+.video.list .img{
+    left: 0 !important;
+    top: 0 !important;
+    border-radius: 10px 0 0 10px !important;
+}
+.video.list .img img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s;
+}
+.video.list:hover{
+    background-color: rgba(255,255,255,1) !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 7px;
+}
+.video.list:hover .img img{
+    width: 110% !important;
+    height: 110% !important;
+    margin-left: -8px !important;
+    margin-top: -5px !important;
+}
+/*番剧等列表*/
+.synthetical,
+.movie-item{
+    background-color: rgba(255,255,255,0.9) !important;
+    padding: 0 15px 0 102px !important;
+    margin: 15px 0 15px 0 !important;
+    width: auto !important;
+    border-radius: 10px;
+    border-style: none !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
+    transition: all 0.3s;
+}
+.synthetical .left-img,
+.movie-item .left-img{
+    top: 0 !important;
+    border-radius: 10px 0 0 10px !important;
+}
+.synthetical .right-info{
+    padding-top: 8px !important;
+}
+.synthetical .right-info .headline{
+    margin-bottom: -5px !important;
+}
+.synthetical .right-info .headline .title{
+    transition: all 0.2s;
+}
+.synthetical .right-info .staff{
+    margin-top: 11px !important;
+    margin-bottom: -3px !important;
+}
+.synthetical .right-info .des{
+    width: auto !important;
+    margin-top: 12px !important;
+    margin-bottom: 0 !important;
+}
+.synthetical .right-info .des.single{
+    margin-top: 8px !important;
+}
+.synthetical .left-img img,
+.movie-item .left-img img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s;
+}
+.synthetical .detail{
+    bottom: 8px !important;
+}
+.synthetical:hover,
+.movie-item:hover{
+    background-color: rgba(255,255,255,1) !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
+}
+.synthetical:hover .left-img img,
+.movie-item:hover .left-img img{
+    width: 110% !important;
+    height: 110% !important;
+    margin-left: -4.5px !important;
+    margin-top: -6px !important;
+}
+.synthetical .list{
+    margin-top: 7px !important;
+}
+.synthetical .list:hover{
+    transition: all 0.2s;
+    background-color: rgb(0,161,214) !important;
+}
+.synthetical .list:hover,
+.synthetical .list:hover span{
+    transition: all 0.2s;
+    color: #FFFFFF !important;
+}
+/*影视*/
+.movie-item .right-info{
+    padding: 8px 0 8px 0 !important;
+    height: 104px !important;
+}
+.movie-item .right-info .headline{
+    margin-bottom: 0 !important;
+}
+.movie-item .right-info .headline,
+.movie-item .right-info .area,
+.movie-item .right-info .actor{
+    height: 20px !important;
+}
+.movie-item .right-info .detail{
+    width: auto !important;
+}
+/*直播*/
+.live-tabs{
+    background-color: rgba(255,255,255,0.95) !important;
+    margin-top: 0 !important;
+    padding-top: 29px;
+}
+.live-room,
+.live-user-wrapper{
+    width: 1100px !important;
+    padding: 0 !important;
+}
+.user-item{
+    background-color: rgba(255,255,255,0.9) !important;
+    border-radius: 10px !important;
+    margin-right: 31px !important;
+}
+.room-item{
+    background-color: rgba(255,255,255,0.9) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    padding-bottom: 5px !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+    transition: all 0.3s;
+}
+.room-item .item-info{
+    padding-left: 10px !important;
+}
+.room-item .item-title{
+    padding: 8px 5px 0 50px !important;
+}
+.room-item .live-num{
+    width: 65px !important;
+}
+.user-item:hover,
+.room-item:hover{
+    background-color: rgba(255,255,255,1) !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 7px;
+}
+.user-more{
+    background: #FFFFFF;
+    padding: 1px 7px 3px 7px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    transition: all 0.2s;
+}
+.popular-btn,
+.latest-btn,
+.cover-btn,
+.frame-btn{
+    background: #FFFFFF;
+    padding: 1px 7px 1px 7px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    transition: all 0.2s;
+}
+.user-more:hover,
+.popular-btn:hover,
+.latest-btn:hover,
+.cover-btn:hover,
+.frame-btn:hover,
+.popular-btn.active,
+.latest-btn.active,
+.cover-btn.active,
+.frame-btn.active{
+    border-color: rgb(0,161,214);
+}
+.icon-live-face,
+.icon-live-frame{
+    position: relative;
+    bottom: 1px;
+}
+.live-user .headline h3,
+.live-room .headline h3{
+    background: #FFFFFF;
+    padding: 4px 10px 6px 10px;
+    border-radius: 11px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
+/*专题、up主*/
+.special{
+    background-color: rgba(255,255,255,0.9) !important;
+    padding-left: 101px !important;
+    padding-right: 15px !important;
+    width: auto !important;
+    margin: 15px 0 15px 0 !important;
+    border-radius: 10px;
+    border-style: none !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
+    transition: all 0.3s;
+}
+.special:hover{
+    background-color: rgba(255,255,255,1) !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
+}
+.special .tags{
+    left: 101px !important;
+}
+.special .img.upuser,
+.special a[se-linkid*="special_img"] .img{
+    left: 15px !important;
+}
+/*画友*/
+.draw-item{
+    margin-right: 39.3px !important;
+    background-color: rgba(255,255,255,0.9) !important;
+    border-radius: 10px;
+    border-style: none !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+    transition: all 0.3s;
+}
+.draw-item:nth-of-type(4),
+.draw-item:nth-of-type(8),
+.draw-item:nth-of-type(12),
+.draw-item:nth-of-type(16),
+.draw-item:nth-of-type(20){
+    margin-right: 0 !important;
+}
+.draw-item:hover{
+    background-color: rgba(255,255,255,1) !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 7px;
+}
+/*其他*/
+.filter-block,
+.synthetical-episode{
+    border-style: none !important;
+}
+/*无结果*/
+.no-result{
+    background-image: url(https://www.tuchuang001.com/images/2017/04/21/56026.png) !important;
+    background-position: 93% 100% !important;
+    margin-top: -40px !important;
+    width: 998px !important;
+    border-width: 0 !important;
+    background-color: rgba(255,255,255,0.95) !important;
+    border-radius: 0 0 20px 20px;
+}
+/*跳页*/
+.paging-wrap{
+    background-color: transparent !important;
+}
+.paging-wrap a,
+.paging-wrap span{
+    border-radius: 15px !important;
+}
+}
+
+@-moz-document domain("space.bilibili.com") {
+/***************************************空间***************************************/
+/*顶栏*/
+.n-inner a{
+    transition: all 0.2s;
+}
+.n-inner a:hover{
+    transform:translateY(-6px);
+}
+.h-guest-hint{
+    display: none;
+}
+.h-guest-hint.active{
+    display: block;
+}
+.n-inner{
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 0 0 20px 20px !important;
+}
+.col-1,/*视频列表*/
+.section.i-live,/*直播间*/
+.section.i-m.host,/*创作中心*/
+.section.i-ann,/*公告*/
+.section.user,/*用户信息*/
+.col-full,/*大面板*/
+.section.game{
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 15px !important;
+    transition: background-color 0.3s;
+}
+#i-ann-text/*公告文本框*/{
+    background-color: transparent !important;
+    margin-left: 0 !important;
+    width: 286px !important;
+    transition: background-color 0.3s;
+}
+.section.elec/*充电*/{
+    padding-left: 17px !important;
+    padding-right: 23px !important;
+    border-radius: 15px 0 20px 20px !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    transition: background-color 0.3s;
+}
+.col-1:hover,
+.section.elec:hover,
+.section.i-live.followed.offline:hover,
+.section.i-live.followed.online:hover,
+.section.i-m.host:hover,
+.section.i-ann:hover,
+.section.user:hover,
+.col-full:hover,
+.section.game:hover{
+    background-color: rgba(255, 255, 255, 1) !important;
+}
+.section.i-tg,
+.content.i-tg-stage{
+    border-radius: 15px !important;
+}
+}
+
+@-moz-document domain("message.bilibili.com") {
+/***************************************消息***************************************/
+/*左*/
+#message_left{
+    background-color: rgba(255,255,255,0.95) !important;
+    height: 292px !important;
+    top: 60px !important;
+    padding-top: 30px !important;
+    padding-bottom: 10px !important;
+    border-radius: 15px !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px 2px;
+}
+#message_left #message_head{
+    padding-top: 0 !important;
+    background-image: none !important;
+    width: 116px !important;
+    height: 40px !important;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #FFFFFF;
+}
+#message_right{ 
+    background-color: transparent !important;
+    padding: 20px !important;
+}
+.message_pagination_list{
+    transition: all 0.2s;
+}
+.message_pagination_list a{
+    padding-left: 0 !important;
+}
+.message_pagination_list .message-type{
+    padding-left: 20px !important;
+    margin-right: 0 !important;
+    width: 120px !important;
+}
+.message-type .new-flag{
+    right: 13px !important;
+}
+.message_pagination_list.active .message-type{
+    color: rgb(72,121,189) !important;
+}
+.message_pagination_list:hover{
+    padding-left: 10px;
+    background-color: rgba(72,121,189,1);
+}
+.message_pagination_list .message-type:hover{
+    color: #FFFFFF !important;
+}
+.message_pagination_list.config-me{
+    margin-top: 0 !important;
+}
+/*顶*/
+.message-title.group-title-3{
+    background-color: rgba(250,93,141,0.95) !important;
+    color: #FFFFFF !important;
+    border-radius: 15px !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 1px;
+}
+/*中*/
+.message-main-lists{
+	 background-color: transparent !important;
+    margin-top: 20px !important;
+}
+.message-main-list{
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 1px;
+    background-color: rgba(255,255,255,0.95) !important;
+    transition: background-color 0.3s;
+}
+.message-main-list:hover,
+.whisper:hover{
+    background-color: rgba(255,255,255,1) !important;
+}
+.no-data{
+    background-image: url(https://www.tuchuang001.com/images/2017/04/24/ndt-56021.png) !important;
+    text-align: center !important;
+    margin-left: 272px !important;
+}
+/*私信*/
+.whisper{
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 1px;
+    background-color: rgba(255,255,255,0.9) !important;
+    background-image: url(https://www.tuchuang001.com/images/2017/04/21/56031.png);
+    background-position: right bottom !important;
+    background-repeat: no-repeat !important;
+    transition: background-color 0.3s;
+}
+.chat_tab_wrapper{
+    background-color: rgba(72,121,189,0.95) !important;
+}
+.chat_tab_wrapper .chat_tab{
+    color: #FFFFFF !important;
+}
+.whisper_left{
+    border-radius: 15px 0 0 20px;
+    background-color: rgba(255,255,255,0.5) !important;
+    padding-bottom: 30px !important;
+}
+.whisper_right{
+    border-radius: 0 20px 20px 0;
+}
+.whisper_right .placeholder{
+    background-image: none;
+}
+/*设置*/
+.config-page.clearfix{
+    background-color: rgba(255,255,255,0.95) !important;
+    transition: background-color 0.3s;
+}
+.config-page.clearfix .config-content{
+    background-color: rgba(249,249,249,0.6) !important;
+    background-image: url(https://www.tuchuang001.com/images/2017/04/21/56030.png);
+    background-position: 90% 95% !important;
+    background-repeat: no-repeat !important;
+}
+.config-page.clearfix:hover{
+    background-color: rgba(255,255,255,1) !important;
+}
+.config-page .text-area{
+    background-color: rgba(255,255,255,0.9) !important;
+}
+}
+
+@-moz-document regexp("^https?://live.bilibili.com/[0-9]+") {
+/***************************************直播***************************************/
+.area-nav-panel.p-absolute.over-hidden.none-select.fade-transition,
+.download-panel.p-absolute.fade-transition{
+    background-color: rgba(255,255,255,0.95) !important;
+    border-radius: 0 0 20px 20px !important;
+}
+.room-main-ctnr.p-relative.m-auto{
+    left: 0 !important;
+}
+/*背景*/
+.bk-img{
+    background-image: url(https://www.tuchuang001.com/images/2017/04/21/zero_12a111.jpg) !important;
+    background-position: center bottom !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+}
+/*直播左栏自动隐藏*/
+#room-left-sidebar{
+    left: -215px;
+    width: 250px;
+    background-color: transparent;
+    box-shadow: none;
+}
+.small-wrap{
+    right: 30px !important;
+    background-color: rgba(255,255,255,0.8);
+	 box-shadow: 0 0 .5em .1em rgba(0,0,0,0.15);
+}
+#room-left-sidebar:hover{
+    left: -160px;
+}
+.sidebar-left-open #room-left-sidebar{
+    left: -160px;
+    width: 220px;
+    background-color: rgba(255,255,255,1);
+	 box-shadow: 0 0 .5em .1em rgba(0,0,0,0.15);
+}
+/*宝箱位置调整*/
+.treasure-box-ctnr.treasure{
+    bottom: -90px;
+    left: 10px;
+}
+.box-panel.live-popup-panel.dp-none{
+    height: 100px;
+    width: 210px;
+    top: -14px;
+    left: 105px;
+    padding: 0px;
+    transform-origin: 0 50%;
+}
+.box-panel.live-popup-panel.dp-none .close-btn.right-top{
+    width: 115px !important;
+    height: 100px !important;
+    border-style: none !important;
+    left: -116px !important;
+    top: 0 !important;
+    background-image: none !important;
+    background-color: transparent !important;
+}
+.box-panel.live-popup-panel.dp-none .close-btn.right-top:hover{
+    transform: none !important;
+}
+.box-panel.live-popup-panel.dp-none .waiting-panel .panel-title{
+    margin-top: 12px;
+}
+.box-panel.live-popup-panel.dp-none .acquiring-panel.dp-i-block .dp-i-block{
+    padding-left: 15px !important;
+}
+/*.box-panel.live-popup-panel.dp-none .close-btn.right-top:after{
+    content: "点击宝箱关闭";
+    color: #B2B2B2;
+    font-family: 'Microsoft Yahei';
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    left: 13px;
+    bottom: -7px;
+    width: 88px;
+}*/
+.live-toast.info{
+    top: calc(100% - 46px) !important;
+}
+.box-panel.live-popup-panel.dp-none .live-btn,
+.box-panel.live-popup-panel.dp-none .treasure-img,
+.live-footer,
+.live-ad-full{
+    display: none !important;
+}
+}
