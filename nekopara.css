@@ -259,10 +259,9 @@ body {
 	font-family: 'Material Icons';
 	font-style: normal;
 	font-weight: normal;
-	src: /*[[ustclug]]*/ url(https://fonts-gstatic.proxy.ustclug.org/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+	src: url(https://fonts-gstatic.proxy.ustclug.org/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
 }
 /*滚动条*/
-/*[[scrollbarCssOn]]*/
 ::-webkit-scrollbar{
     width: 6px;
     height: 6px;
@@ -274,7 +273,7 @@ body {
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 3px;
-    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3) inset;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,.3) inset;
     background-color: #999;
 }
 ::-webkit-scrollbar-thumb:hover{
@@ -896,7 +895,7 @@ body {
 }
 /*播放器调整兼容*/
 .player-wrapper{
-    width: 1160px ;/*[[wideNo]]*/
+    width: 1160px /*[[wideNo]]*/
 }
 .player-wrapper{
     width: 980px;
@@ -1340,9 +1339,6 @@ body {
 .a_layer .bg .arrow.arrow_r{
     right: 0;
 }
-/*setting*/
-/*[[recommendAreaYes]]*/
-/*[[vLiveRecommendYes]]*/
 }
 
 @-moz-document regexp("^https?://bangumi.bilibili.com/(.*)/play#(.*)") {
@@ -1529,6 +1525,15 @@ body {
 .rside .vb img{
     margin: 0 !important;
 }
+/*watchLater*/
+.watch-later{
+    top: 86px;
+    cursor: pointer;
+}
+/*search*/
+.nav-search .nav-search-keyword{
+    width: 120px;
+}
 }
 
 @-moz-document regexp("^https?://search.bilibili.com/?") {
@@ -1649,17 +1654,18 @@ body {
 .nav-sub .wrap .sub{
     transition: all 0.2s;
     width: 46px !important;
+    margin-right: 55px !important;
 }
-/*.nav-sub .wrap .sub[data-href="/drawyoo"]{
+.nav-sub .wrap .sub:last-of-type{
     margin-right: 0 !important;
-}*/
+}
 .nav-sub .wrap .sub:hover{
     font-size: 19px !important;
 }
 .nav-sub .wrap .hover-bar{
     width: 46px !important;
     height: 3px !important;
-    margin-left: 7px;
+    /*margin-left: 7px;*/
     z-index: 100;
     bottom: -4px;
 }
@@ -2048,6 +2054,38 @@ body {
 .paging-wrap a,
 .paging-wrap span{
     border-radius: 15px !important;
+}
+/*up主栏*/
+.up-item{
+    border-style: none !important;
+    background-color: rgba(255,255,255,0.9) !important;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
+    transition: all 0.3s;
+    padding-left: 120px;
+    padding-right: 20px;
+}
+.up-item>.up-face{
+    left: 20px;
+}
+.up-item:hover{
+    background-color: rgba(255,255,255,1) !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
+}
+.up-item .up-videos .video-pic img{
+    border-radius: 5px;
+}
+.up-item .up-videos .video-more{
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: -5px;
+    margin-right: -5px;
+}
+.up-item .up-videos .video-more:hover{
+    background-color: #e5e9ef;
+}
+.all-other{
+    margin-top: 30px;
 }
 }
 
