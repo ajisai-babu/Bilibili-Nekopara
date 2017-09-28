@@ -15,6 +15,9 @@ body {
     		background-image: url(https://tuchuang001.com/images/2017/04/21/zero_12a111_small.jpg) !important;
     }
 }
+body{
+    background-image: url() /*[[noDiyBg]]*/;
+}
 /*顶栏*/
 .z_top.white{/*total*/
     background-color: rgba(255, 255, 255, 0.95) !important;
@@ -93,12 +96,9 @@ body {
 .view-later-module{
     margin-top: 20px;
 }
-.nav-menu{
-    margin-left: 3px;
-}
 .nav-menu .nav-item{
     background-color: #fff;
-	 border-radius: 24px;
+	border-radius: 24px;
     margin-left: 0 !important;
     margin-right: 4px !important;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px 0px;
@@ -111,8 +111,8 @@ body {
     padding: 0px 10px 0px 10px;
 }
 .nav-menu>.nav-item.home{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .nav-menu .sub-nav{
     border-radius: 8px !important;
@@ -124,6 +124,7 @@ body {
 }
 .nav-menu .nav-item:first-child:hover,
 .nav-menu .nav-item:nth-child(12):hover,
+.nav-menu .nav-item.zl,
 .nav-menu .nav-item:last-child:hover{
     transform: none;
 }
@@ -138,19 +139,19 @@ body {
 }
 @media screen and (min-width: 1400px){
     .nav-menu{
-	    margin-left: 1px;
+	    margin-left: 2.5px;
 	}
     .nav-menu .nav-item{
-		 border-radius: 26px;
+		border-radius: 26px;
 	    padding: 2px;
-	    margin-right: 12px !important;
+	    margin-right: 11px !important;
 	}
     .nav-menu .nav-item.side-nav{
-	    padding: 1px 10px 1px 10px;
+	    padding: 3.5px 10px 3.5px 10px;
 	}
 	.nav-menu>.nav-item.home{
-	    padding-left: 12px;
-	    padding-right: 12px;
+	    padding-left: 14px;
+	    padding-right: 14px;
 	}
     .nav-menu .sub-nav{
 	    margin-top: 2px;
@@ -1341,12 +1342,8 @@ body {
     right: 0;
 }
 /*setting*/
-.main-inner .recommend-area{
-    display: none !important; /*[[recommendAreaNo]]*/
-}
-.main-inner .v-live-recommend{
-    display: none !important; /*[[vLiveRecommendNo]]*/
-}
+/*[[recommendAreaYes]]*/
+/*[[vLiveRecommendYes]]*/
 }
 
 @-moz-document regexp("^https?://bangumi.bilibili.com/(.*)/play#(.*)") {
