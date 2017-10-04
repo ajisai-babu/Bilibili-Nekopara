@@ -74,14 +74,33 @@ body{
 .widescreen .menu-wrapper{
     width: 1055px !important;
 }
-.nav-menu .m-i:nth-last-of-type(1),
-.nav-menu .m-i:nth-last-of-type(2),
-.nav-menu .m-i:nth-last-of-type(3){
+.header .num ul.nav-menu{
+    padding-right: 0;
+}
+.widescreen .header .num li.m-i{
+    margin-right: 10px;
+}
+.header .num li.m-i{
+    margin-right: 3px;
+}
+.nav-menu .m-i.side-nav .i-link i{
+    margin-top: 6px !important;
+}
+.nav-menu .m-i.side-nav:nth-last-of-type(1),
+.nav-menu .m-i.side-nav:nth-last-of-type(2),
+.nav-menu .m-i.side-nav:nth-last-of-type(3){
+    margin-right: 0 !important;
+    margin-left: 3px !important;
+}
+.widescreen .nav-menu .m-i.side-nav:nth-last-of-type(1),
+.widescreen .nav-menu .m-i.side-nav:nth-last-of-type(2),
+.widescreen .nav-menu .m-i.side-nav:nth-last-of-type(3){
     margin-right: 0 !important;
     margin-left: 20px !important;
 }
-.nav-menu .m-i:nth-last-of-type(3){
-    margin-left: 8px !important;
+.nav-menu .m-i.side-nav:nth-last-of-type(4){
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 .menu-wrapper .search{
     margin-right: -52px;
