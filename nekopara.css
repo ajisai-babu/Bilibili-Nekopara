@@ -69,18 +69,25 @@ body{
     border-color: transparent !important;
 }
 .menu-wrapper{
-    width: 884px !important;
+    width: 940px !important;
 }
 .widescreen .menu-wrapper{
-    width: 1055px !important;
+    width: 1064px !important;
 }
 .header .num ul.nav-menu{
     padding-right: 0;
 }
 .widescreen .header .num li.m-i{
-    margin-right: 10px;
+    margin-right: 9px;
 }
 .header .num li.m-i{
+    margin-right: 3px;
+}
+.widescreen .header .num li.m-i.home{
+    margin-right: 20px;
+    padding-right:0 !important;
+}
+.header .num li.m-i.home{
     margin-right: 3px;
 }
 .nav-menu .m-i.side-nav .i-link i{
@@ -90,17 +97,21 @@ body{
 .nav-menu .m-i.side-nav:nth-last-of-type(2),
 .nav-menu .m-i.side-nav:nth-last-of-type(3){
     margin-right: 0 !important;
-    margin-left: 3px !important;
+    margin-left: 4px !important;
 }
 .widescreen .nav-menu .m-i.side-nav:nth-last-of-type(1),
 .widescreen .nav-menu .m-i.side-nav:nth-last-of-type(2),
 .widescreen .nav-menu .m-i.side-nav:nth-last-of-type(3){
     margin-right: 0 !important;
-    margin-left: 20px !important;
+    margin-left: 15px !important;
 }
 .nav-menu .m-i.side-nav:nth-last-of-type(4){
     margin-left: 0 !important;
     margin-right: 0 !important;
+}
+body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
+    left: auto !important;
+    right: 0;
 }
 .menu-wrapper .search{
     margin-right: -52px;
@@ -112,6 +123,11 @@ body{
     display: none !important;
 }
 /*新顶栏*/
+#primary_menu{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
 .view-later-module{
     margin-top: 20px;
 }
@@ -157,9 +173,6 @@ body{
 	}
 }
 @media screen and (min-width: 1400px){
-    .nav-menu{
-	    margin-left: 2.5px;
-	}
     .nav-menu .nav-item{
 		border-radius: 26px;
 	    padding: 2px;
@@ -279,7 +292,7 @@ body{
 	font-family: 'Material Icons';
 	font-style: normal;
 	font-weight: normal;
-	src: /*[[ustclug]]*/ url(https://fonts-gstatic.proxy.ustclug.org/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+	src: /*[[fonts-gstatic]]*/ url(https://fonts.gstatic.com/s/materialicons/v30/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
 }
 /*滚动条*/
 /*[[scrollbarCssOn]]*/
@@ -344,6 +357,10 @@ body{
     margin-right: 30px;
 }
 /*首页板块*/
+.elevator-module .nav-bg{
+    background-color: transparent;
+}
+/*animations-for-future-project*/
 @keyframes rowDTU{
     0%{transform: translateY(200px); opacity: 0;}
     100%{transform: translateY(0); opacity: 1;}
@@ -1208,6 +1225,10 @@ body{
 }
 .arc-toolbar .elecrank-btn{
     bottom: 0;
+}
+/*bug-fixed*/
+.arc-toolbar .block.fav:before{
+    content: none;
 }
 /*bilibili helper*/
 .arc-toolbar .helper .t{
