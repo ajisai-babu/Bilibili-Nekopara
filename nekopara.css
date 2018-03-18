@@ -1,10 +1,10 @@
-@-moz-document domain("search.bilibili.com"), domain("space.bilibili.com"), domain("message.bilibili.com"), domain("t.bilibili.com"), regexp("^https?://www.bilibili.com/?(index.html)?"), regexp("^https?://www.bilibili.com/video/av(.*)"), regexp("^https?://www.bilibili.com/account/dynamic/?"), regexp("^https?://bangumi.bilibili.com/(.*)/play#(.*)"), regexp("^https?://www.bilibili.com/watchlater/(.*)"), regexp("^https?://www.bilibili.com/bangumi/play/(.*)") {
+@-moz-document domain("search.bilibili.com"), domain("space.bilibili.com"), domain("message.bilibili.com"), domain("t.bilibili.com"), regexp("^https?://www.bilibili.com/?((index.html)|(\\?spm_id_from=.*))?"), regexp("^https?://www.bilibili.com/video/av(.*)"), regexp("^https?://www.bilibili.com/account/dynamic/?"), regexp("^https?://bangumi.bilibili.com/(.*)/play#(.*)"), regexp("^https?://www.bilibili.com/watchlater/(.*)"), regexp("^https?://www.bilibili.com/bangumi/play/(.*)") {
 /************************************通用************************************/
 html{
     background-color: transparent;
 }
 body {
-    background-image: url(https://tuchuang001.com/images/2017/04/21/zero_12a111.jpg) !important;
+    background-image: url(https://res.hibikiii.com/bilibili/bg.jpg) !important;
     background-position: center bottom !important;
     background-size: cover !important;
     background-attachment: fixed !important;
@@ -12,7 +12,7 @@ body {
 }
 @media screen and (max-width: 1650px){
     body{
-    		background-image: url(https://tuchuang001.com/images/2017/04/21/zero_12a111_small.jpg) !important;
+    		background-image: url(https://res.hibikiii.com/bilibili/bg_small.jpg) !important;
     }
 }
 body{
@@ -163,7 +163,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 #primary_menu.border-b{
     border: none;
 }
-#primary_menu .nav-menu .nav-item{
+#primary_menu .nav-menu > li{
     background-color: #fff;
 	border-radius: 24px;
     margin-left: 0 !important;
@@ -174,53 +174,55 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 #primary_menu .nav-menu .channel.on:after{
     display: none;
 }
-#primary_menu .nav-menu .nav-item:last-child{
+#primary_menu .nav-menu > li:last-child{
     margin-right: 0 !important;
 }
-#primary_menu .nav-menu .nav-item.side-nav{
+#primary_menu .nav-menu > li.side-nav{
     padding: 0px 10px 0px 10px;
 }
-#primary_menu .nav-menu>.nav-item.home{
+#primary_menu .nav-menu > li.home{
     padding-left: 12px;
     padding-right: 12px;
 }
 #primary_menu .nav-menu .sub-nav{
     border-radius: 8px !important;
 }
-#primary_menu .nav-menu .nav-item.channel.on{
+#primary_menu .nav-menu > li.channel.on{
     box-shadow: rgba(0, 161, 214, 0.9) 0px 0px 12px 2px;
 }
-#primary_menu .nav-menu .nav-item:hover{
+#primary_menu .nav-menu > li:hover{
     z-index: 100;
     box-shadow: rgba(255, 175, 201, 0.9) 0px 0px 15px 3px;
     transform: translateY(8px);
 }
 
-#primary_menu .nav-menu .nav-item:first-child:hover,
-#primary_menu .nav-menu .nav-item:nth-child(12):hover,
-#primary_menu .nav-menu .nav-item.zl,
-#primary_menu .nav-menu .nav-item:last-child:hover{
+#primary_menu .nav-menu > li:first-child:hover,
+#primary_menu .nav-menu > li:nth-child(12):hover,
+#primary_menu .nav-menu > li.zl,
+#primary_menu .nav-menu > li:last-child:hover{
     transform: none;
 }
-@media screen and (max-width: 1399px){
-    #primary_menu .nav-menu .nav-item.side-nav{
-	    height: 48px !important;
-	}
+@media screen and (max-width: 1690px){
     #primary_menu .nav-menu .side-nav .sub-nav{
 	    left: auto !important;
     	right: 0 !important;
 	}
 }
+@media screen and (max-width: 1399px){
+    #primary_menu .nav-menu > li.side-nav{
+	    height: 48px !important;
+	}
+}
 @media screen and (min-width: 1400px){
-   #primary_menu  .nav-menu .nav-item{
+   #primary_menu  .nav-menu > li{
 		border-radius: 26px;
 	    padding: 2px;
 	    margin-right: 11px !important;
 	}
-    #primary_menu .nav-menu .nav-item.side-nav{
+    #primary_menu .nav-menu > li.side-nav{
 	    padding: 3.5px 10px 3.5px 10px;
 	}
-	#primary_menu .nav-menu>.nav-item.home{
+	#primary_menu .nav-menu > li.home{
 	    padding-left: 14px;
 	    padding-right: 14px;
 	}
@@ -314,49 +316,28 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .bilibili-suggest .clearall:hover{
     color: #999999 !important;
 }
-/*返回顶部*/
-.n-i.gotop{
-    height: 46px !important;
-	 width: 46px !important;
-    border: 1px !important;
-    border-color: rgb(229,233,239) !important;
-    border-style: solid !important;
-    border-radius: 4px !important;
-    background-color: rgb(246,249,250) !important;
-    margin-top: 9px !important;
-    overflow: hidden !important;
-    transition: all 0.3s;
+/*适配、美化解除地区限制脚本*/
+.nav-goto-top{
+    border: 1px solid #e5e9ef !important;
 }
-.n-i.gotop .btn_gotop{
-    border-width: 0 !important;
-    background-color: transparent !important;
-    transition: margin 0.3s;
+.balh_settings{
+    margin-top: 4px;
 }
-.n-i.gotop:hover{
-    background-color: #00A1D6 !important;
-    border-color: #00A1D6 !important;
+.balh_settings .btn_gotop{
+    border-radius: 4px;
+    border: 1px solid #e5e9ef;
+    height: 48px !important;
 }
-.btn_gotop{
-    height: 46px !important;
+.balh_settings .btn_gotop,
+.balh_settings .btn_gotop svg{
+    transition: all .2s;
 }
-.btn_gotop:after{
-    content: "返回顶部";
-    color: #FFFFFF;
-    width: 27px;
-    line-height: 13px !important;
-    position: absolute;
-    left: 10px;
-    top: 58px;
-    transition: margin 0.3s;
+.balh_settings .btn_gotop:hover{
+    background-color: #00a1d6 !important;
+    cursor: pointer;
 }
-.n-i.gotop:hover .btn_gotop{
-    margin-top: -48px !important;
-}
-.n-i.gotop:hover :after{
-    margin-top: -48px !important;
-}
-.n-i.gotop .s-line{
-    display: none !important;
+.balh_settings .btn_gotop:hover svg{
+    fill: #fff !important;
 }
 /*尾部*/
 .footer{
@@ -374,7 +355,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 	font-family: 'Material Icons';
 	font-style: normal;
 	font-weight: normal;
-	src: /*[[hibikiii-fs]]*/ url(https://res.hibikiii.com/fonts/materialicons.woff2) format('woff2');
+	src: /*[[fonts-gstatic]]*/ url(https://fonts.gstatic.com/s/materialicons/v30/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
 }
 /*滚动条*/
 /*[[scrollbarCssOn]]*/
@@ -400,7 +381,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 }
 
-@-moz-document regexp("^https?://www.bilibili.com/?(index.html)?") {
+@-moz-document regexp("^https?://www.bilibili.com/?((index.html)|(\\?spm_id_from=.*))?") {
 /************************************首页************************************/
 .bili-wrapper{
     width: 1220px;
@@ -480,7 +461,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .popularize-module .adpos:after{
     margin-top: 10px;
-    content: url(https://tuchuang001.com/images/2017/04/21/hpg-56016.png);
+    content: url(https://res.hibikiii.com/bilibili/index_neko.png);
     visibility: visible;
 }
 .popularize-module .adpos{
@@ -575,7 +556,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .back-top.icon:before{
     content: " ";
-    background-image: url(https://tuchuang001.com/images/2017/05/20/arrowup1.png);
+    background-image: url(https://res.hibikiii.com/bilibili/arrowup1.png);
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
@@ -703,7 +684,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     position: absolute;
     content: "";
     line-height: 28px;
-    background: url(https://tuchuang001.com/images/2017/04/21/neko.png) no-repeat;
+    background: url(https://res.hibikiii.com/bilibili/progress_bar_neko.png) no-repeat;
 }
 .bilibili-player-video-btn-send.bpui-button{
     overflow: hidden;
@@ -761,10 +742,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .mode-webfullscreen .bilibili-player-auxiliary-area:before,
 .mode-fullscreen .bilibili-player-auxiliary-area:before{
-    content: url(https://tuchuang001.com/images/2017/05/10/right-button.png);
-    /*background-image: url(https://tuchuang001.com/images/2017/05/07/right-button3.png);
-    background-position: right center;
-    background-repeat: no-repeat;*/
+    content: url(https://res.hibikiii.com/bilibili/right-button.png);
     position: fixed;
     top: calc(50% - 50px);
     height: 100px;
@@ -868,6 +846,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .bangumi-header,
 .viewbox,
 #app .bili-header-m.report-wrap-module + .bili-wrapper.clearfix,/*new*/
+#app .bili-header-m.report-wrap-module + div + .bili-wrapper.clearfix,/*new*/
 .video-top-info{
     background-color: #FFFFFF !important;
     margin-top: 25px !important;
@@ -1007,14 +986,18 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 #loli,/*屏蔽已经失效的lolivector*/
 .ad-f,
 .ad,
-.video-bottom-ad,
-#app .bili-header-m.report-wrap-module + .bili-wrapper.clearfix + .bili-wrapper.clearfix{
+.video-top-ad,
+.video-bottom-ad{
     display: none !important;
 }
 /*new*/
-#app .bili-header-m.report-wrap-module + .bili-wrapper.clearfix{
+#app .bili-header-m.report-wrap-module + .bili-wrapper.clearfix,
+#app .bili-header-m.report-wrap-module + div + .bili-wrapper.clearfix/*new*/{
     width: 950px;
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
+}
+.video-info-m{
+	width: 610px;
 }
 .l-wrapper {
     width: 660px;
@@ -1023,7 +1006,8 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     margin-right: 5px;
 }
 @media screen and (min-width: 1400px){
-    #app .bili-header-m.report-wrap-module + .bili-wrapper.clearfix{
+    #app .bili-header-m.report-wrap-module + .bili-wrapper.clearfix,
+#app .bili-header-m.report-wrap-module + div + .bili-wrapper.clearfix/*new*/{
     	width: 1130px;
 	}
     .video-info-m{
@@ -1383,6 +1367,12 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     bottom: -20px;
     z-index: -999;
 }
+/*bug-fix*/
+@media screen and (max-width: 1400px){
+    .arc-toolbar .block{
+        margin-left:0
+    }
+}
 /*比赛视频信息*/
 .inside-wrp{
     background-color: rgba(255, 255, 255, 0.95);
@@ -1491,7 +1481,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     background-image: none !important;
 }
 .no-list-icon:after{
-    content: url(https://tuchuang001.com/images/2017/04/21/nlb-56052.png);
+    content: url(https://res.hibikiii.com/bilibili/charge_neko.png);
 }
 /*大家围观的直播*/
 .pop-live,/*new*/
@@ -1518,15 +1508,21 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 /*notfound*/
 .b-page-body .z-msg-box .bg{
-    background-image: url(https://tuchuang001.com/images/2017/04/30/notfound.png);
+    background-image: url(https://res.hibikiii.com/bilibili/notfound.png);
 }
 /*360chrome bug*/
 .a_layer .bg .arrow.arrow_r{
     right: 0;
 }
 /*setting*/
-/*[[recommendAreaYes]]*/
-/*[[vLiveRecommendYes]]*/
+.main-inner .recommend-area,
+#recommend_report{
+    display: none !important; /*[[recommendAreaNo]]*/
+}
+.main-inner .v-live-recommend,
+.pop-live{
+    display: none !important; /*[[vLiveRecommendNo]]*/
+}
 }
 
 @-moz-document regexp("^https?://bangumi.bilibili.com/(.*)/play#(.*)"), regexp("^https?://www.bilibili.com/bangumi/play/(.*)") {
@@ -1538,7 +1534,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .pic-wrapper,
 .t-sponsor-img{
-    background-image: url(https://tuchuang001.com/images/2017/04/21/topview-sponsor.png) !important;
+    background-image: url(https://res.hibikiii.com/bilibili/topview-sponsor.png) !important;
     background-size: contain;
     width: 150px !important;
     height: 110px !important;
@@ -1598,7 +1594,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .sponsor-right-area > .img-wrapper,
 .sponsor-tosponsor-img{
-    background-image: url(https://tuchuang001.com/images/2017/04/21/chengbao.png) !important;
+    background-image: url(https://res.hibikiii.com/bilibili/chengbao.png) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -1742,74 +1738,53 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     background-color: #FFF;
     height: 360px !important;
 }
+.hot-search,
+.history{
+    background-color: #FFF;
+}
 .footer{
     display: none !important;
 }
 }
 
 @-moz-document regexp("^https?://search.bilibili.com/(.+)") {
-/************************************搜索************************************/
+/***********************************搜索***********************************/
 /*search*/
-.distort,
-.search-logo,
-#search-button span{
+.search-logo{
     display: none !important;
 }
-#search-button{
-    width: 32px !important;
-    height: 32px !important;
+.search-wrap{
+    width: 420px;
+    height: 42px;
+    border-radius: 21px;
+    box-shadow: rgba(0, 0, 0, .2) 0 0 3px;
 }
-.js-search-wrap{
-    width: 190px !important;
-    height: 32px !important;
-    margin: auto;
-    z-index: 10001 !important;
-    text-align: center;
-    position: relative;
-    top: -38px;
-    left: 0;
+.search-wrap .search-block{
+    width: 420px;
+    margin-left: 0;
 }
-.js-search-wrap:hover #search-keyword{
-    border-color: rgb(0,161,214) !important;
+.search-wrap .search-block .input-wrap{
+    border-radius: 21px 0 0 21px;
+    margin-right: 0;
+    background-color: rgba(255,255,255,.8);
+    transition: all .3s;
 }
-.old-ver #search-wrap #header-search #search-block #search-button{
-    border-radius: 0;
+.search-wrap .search-block .input-wrap:hover{
+    background-color: rgba(255,255,255,1);
 }
-#search-wrap{
-    margin-top: 0;
-    height: 100%;
+.search-wrap .search-block .input-wrap input{
+	border-radius: 22px 0 0 22px;
+    height: 16px;
+    transition: all .3s;
 }
-#header-search,
-#header-search .logo-input{
-    width: auto !important;
-    height: 100% !important;
+.search-wrap .search-block .input-wrap input:focus{
+	outline: none;
+    border-color: #00a1d6;
 }
-#search-block{
-    position: static !important;
-    width: auto !important;
-    height: 100% !important;
+.search-wrap .search-block .search-button{
+	border-radius: 0 22px 22px 0;
 }
-#search-block .input-wrap{
-    height: 32px !important;
-    width: calc(100% - 32px) !important;
-    margin-right: 0 !important;
-}
-#search-keyword{
-    padding: 5px 42px 5px 10px !important;
-    height: 20px !important;
-    width: calc(100% - 22px) !important;
-    border-radius: 4px;
-    position: relative;
-    transition: all 0.2s;
-    z-index: 0;
-}
-.icon-search-white{
-    height: 32px !important;
-    margin-top: 4px !important;
-    position: relative;
-    z-index: 1;
-}
-/**/
+/*搜索历史（待移植）*/
 .history-wrap .title{
     margin-left: 12px;
     margin-right: 12px;
@@ -1819,7 +1794,6 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     padding-right: 0 !important;
     height: 30px !important;
     line-height: 30px !important;
-    /*overflow: hidden !important;*/
 }
 .vertical-text.history.fake-a .clear{
     height: 14px !important;
@@ -1854,49 +1828,50 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     height: 30px;
 }
 /*顶部*/
-.distort{
+.head-contain .nav-wrap,
+.body-contain .filter-wrap,
+.body-contain .total-wrap,
+.body-contain .live-tabs.clearfix,
+.body-contain .dropdown-wrap.clearfix,
+.error-wrap{
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.head-contain .nav-wrap{
+    border-radius: 20px 20px 0 0;
+}
+.head-contain .nav-wrap .hover-bar{
+    margin-left: 20px;
+}
+.body-contain .filter-wrap{
+    border-radius: 0 0 20px 20px;
+    border: none;
+}
+.body-contain .filter-wrap .fold.up,
+.body-contain .filter-wrap .switch-wrap{
+    margin-right: 20px;
+}
+.body-contain .total-wrap{
+    margin-top: 0;
+    padding-top: 10px;
+}
+.body-contain .live-tabs.clearfix{
+    padding-top: 10px;
     border-radius: 0 0 20px 20px;
 }
-.nav-sub{
-    background-color: rgba(255,255,255,0.95) !important;
-    border-radius: 15px 20px 0 0;
-    padding: 0 10px 0 10px !important;
-}
-.nav-sub .wrap .sub{
-    transition: all 0.2s;
-}
-.nav-sub .wrap .sub:hover{
-    font-size: 19px !important;
-}
-.nav-sub .wrap .hover-bar{
-    height: 3px !important;
-    z-index: 100;
-}
-.so-wrap{
-    width: 998px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-}
-.so-wrap .so-info{
-    background-color: rgba(255,255,255,0.95) !important;
-    margin-top: 0 !important;
-    padding: 10px 10px 0 10px !important;
-    width: 978px !important;
-}
-.so-wrap .so-info .switch{
-    right: 10px !important;
-    top: 10px !important;
-}
-.so-wrap .filter-block{
-    margin: 0 !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    background-color: rgba(255,255,255,0.95) !important;
+.body-contain .dropdown-wrap.clearfix,
+.special-wrap .total-wrap,
+.bangumi-wrap .total-wrap,
+.pgc-wrap .total-wrap,
+.topic-wrap .total-wrap{
+    padding-bottom: 10px;
     border-radius: 0 0 20px 20px;
-    transition: all 0.8s;
 }
-.so-wrap .filter-block .fold{
-    right: 10px;
+.body-contain .dropdown-wrap.clearfix .total-wrap{
+    background-color: transparent !important;
 }
 /*all*/
 .ajax-render{
@@ -1944,7 +1919,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     border-style: none !important;
     box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
     transition: all 0.3s;
-	 margin-right: 39.5px !important;
+	 margin-right: 35px !important;
 } 
 .matrix.video:nth-of-type(5),
 .matrix.video:nth-of-type(10),
@@ -2035,6 +2010,13 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
     transition: all 0.3s;
 }
+.bangumi-wrap .synthetical,
+.bangumi-list .synthetical{
+    padding-bottom: 5px !important;
+}
+.synthetical .left-img{
+    overflow: hidden;
+}
 .synthetical .left-img,
 .movie-item .left-img{
     top: 0 !important;
@@ -2124,7 +2106,10 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .user-item{
     background-color: rgba(255,255,255,0.9) !important;
     border-radius: 10px !important;
-    margin-right: 31px !important;
+    margin-right: 19px !important;
+}
+.user-item:nth-child(3n){
+    margin-right: 0 !important;
 }
 .room-item{
     background-color: rgba(255,255,255,0.9) !important;
@@ -2192,30 +2177,51 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     border-radius: 11px;
     box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
 }
-/*专题、up主*/
-.special{
-    background-color: rgba(255,255,255,0.9) !important;
-    padding-left: 101px !important;
-    padding-right: 15px !important;
-    width: auto !important;
-    margin: 15px 0 15px 0 !important;
-    border-radius: 10px;
-    border-style: none !important;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
-    transition: all 0.3s;
-}
-.special:hover{
-    background-color: rgba(255,255,255,1) !important;
+/*专栏*/
+.article{
+    margin-top: 20px;
+    padding-left: 20px !important;
+    padding-right: 192px !important;
+    margin-left: -20px;
+    margin-right: -20px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: none;
+    overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
 }
+.article .tags{
+    margin-left: 20px;
+}
+.article-wrap .article .cover{
+    top: 0;
+    bottom: 0;
+    width: 130px;
+    height: auto;
+}
+.article-wrap .article .cover img{
+    height: 100% !important;
+    margin: auto !important;
+}
+/*专题*/
+.special{
+    border: none;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px 15px 20px 106px !important;
+    margin-left: -20px;
+    margin-right: -20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
+}
+.special .special-cover .img,
 .special .tags{
-    left: 101px !important;
+    margin-left: 20px;
 }
-.special .img.upuser,
-.special a[se-linkid*="special_img"] .img{
-    left: 15px !important;
+.special .special-cover .img{
+    top: 20 !important;
 }
-/*画友*/
+/*相簿*/
 .draw-item{
     margin-right: 39.3px !important;
     background-color: rgba(255,255,255,0.9) !important;
@@ -2235,60 +2241,56 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     background-color: rgba(255,255,255,1) !important;
     box-shadow: rgba(0, 0, 0, 0.3) 0 0 7px;
 }
+.photo{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
+}
 /*其他*/
 .filter-block,
 .synthetical-episode{
     border-style: none !important;
 }
 /*无结果*/
-.no-result{
+.error-wrap{
     background-image: url(https://tuchuang001.com/images/2017/04/21/56026.png) !important;
     background-position: 93% 100% !important;
-    margin-top: -40px !important;
-    width: 998px !important;
-    border-width: 0 !important;
-    background-color: rgba(255,255,255,0.95) !important;
+    margin-top: 0 !important;
     border-radius: 0 0 20px 20px;
 }
 /*跳页*/
-.paging-wrap{
+.pager{
     background-color: transparent !important;
 }
-.paging-wrap a,
-.paging-wrap span{
-    border-radius: 19px !important;
+.pages .page-item:not(.prev):not(.next){
+    height: 40px;
+    width: 40px;
+}
+.pages .page-item button{
+    margin: 0 !important;
+    width: 100%;
+    border-radius: 20px !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
+.pages .page-item:not(.prev):not(.next) button{
+    padding: 0 !important;
+}
+.pages .page-item button:focus{
+    outline: none;
 }
 /*up主栏*/
 .up-item{
-    border-style: none !important;
-    background-color: rgba(255,255,255,0.9) !important;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
-    transition: all 0.3s;
-    padding-left: 120px;
-    padding-right: 20px;
-}
-.up-item>.up-face{
-    left: 20px;
-}
-.up-item:hover{
-    background-color: rgba(255,255,255,1) !important;
+    border: none;
+    margin-top: 20px;
+    background-color: #fff;
+    padding-left: 122px !important;
+    padding-right: 20px !important;
+    margin-left: -20px;
+    margin-right: -20px;
+    border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
 }
-.up-item .up-videos .video-pic img{
-    border-radius: 5px;
-}
-.up-item .up-videos .video-more{
-    padding: 5px;
-    border-radius: 4px;
-    margin-bottom: -5px;
-    margin-right: -5px;
-}
-.up-item .up-videos .video-more:hover{
-    background-color: #e5e9ef;
-}
-.all-other{
-    margin-top: 30px;
+.up-item>.up-face{
+    margin-left: 20px;
 }
 /*some-bug-fix*/
 .all-other .left-img{
@@ -2446,7 +2448,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     background-color: rgba(255,255,255,1) !important;
 }
 .no-data{
-    background-image: url(https://tuchuang001.com/images/2017/04/24/ndt-56021.png) !important;
+    background-image: url(https://res.hibikiii.com/bilibili/noresult.png) !important;
     text-align: center !important;
     margin-left: 272px !important;
 }
@@ -2455,7 +2457,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 1px;
     background-color: rgba(255,255,255,0.9) !important;
-    background-image: url(https://tuchuang001.com/images/2017/04/21/56031.png);
+    background-image: url(https://res.hibikiii.com/bilibili/noresult.png);
     background-position: right bottom !important;
     background-repeat: no-repeat !important;
     transition: background-color 0.3s;
@@ -2484,7 +2486,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .config-page.clearfix .config-content{
     background-color: rgba(249,249,249,0.6) !important;
-    background-image: url(https://tuchuang001.com/images/2017/04/21/56030.png);
+    background-image: url(https://res.hibikiii.com/bilibili/setting.png);
     background-position: 90% 95% !important;
     background-repeat: no-repeat !important;
 }
@@ -2493,5 +2495,62 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .config-page .text-area{
     background-color: rgba(255,255,255,0.9) !important;
+}
+}
+
+@-moz-document regexp("^https?://bangumi.bilibili.com/anime/\\d+") {
+/************************************番剧************************************/
+.sponsor-tosponsor-img img{
+    display: none !important;
+}
+.sponsor-tosponsor-img{
+    background-image: url(https://res.hibikiii.com/bilibili/chengbao.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100% !important;
+}
+}
+
+@-moz-document regexp("^https?://message.bilibili.com/pages/nav/index"), regexp("^https?://t.bilibili.com/pages/nav/index") {
+body{
+    background-image: none !important;
+}
+.im-list-box{
+    background-color: rgba(255,255,255,.96);
+}
+}
+
+@-moz-document domain("t.bilibili.com") {
+/***********************************新动态***********************************/
+#app{
+    background: none !important;
+}
+.user-panel.f-left,
+.right-panel.f-left>*,
+.section-block,
+.tab-bar,
+.card{
+    border-radius: 15px !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px 0;
+    transition: all 0.3s;
+}
+.card{
+    background-color: rgba(255,255,255,.9) !important;
+}
+.card:hover{
+    background-color: rgba(255,255,255,1) !important;
+}
+.card .image-area{
+    overflow: hidden;
+}
+.card .image-area > img{
+    transition: all 0.2s;
+}
+.card:hover .image-area > img{
+    transform: scale(1.1);
+}
+.bili-header-m .nav-search .nav-search-keyword{
+    width: 150px;
 }
 }
