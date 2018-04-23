@@ -797,6 +797,10 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .mode-webfullscreen .bilibili-player-auxiliary-area{
     height: calc(100% - 68px);
 }
+/*bug:侧边栏内容超出*/
+.mode-webfullscreen .bilibili-player-panel-scrollbar{
+    height: 100% !important;
+}
 /*全屏模式底部进度条调整*/
 .mode-fullscreen .bilibili-player-video-control:before{
     content: " ";
@@ -987,7 +991,8 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .ad-f,
 .ad,
 .video-top-ad,
-.video-bottom-ad{
+.video-bottom-ad,
+.bilibili-player-promote-wrap{
     display: none !important;
 }
 /*new*/
@@ -997,7 +1002,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     padding-bottom: 0 !important;
 }
 .video-info-m{
-	width: 610px;
+	margin-right: -10px;
 }
 .l-wrapper {
     width: 660px;
@@ -1010,9 +1015,6 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 #app .bili-header-m.report-wrap-module + div + .bili-wrapper.clearfix/*new*/{
     	width: 1130px;
 	}
-    .video-info-m{
-		width: 610px;
-    }    
     .l-wrapper {
 		width: 840px;
     }
@@ -1527,7 +1529,9 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 
 @-moz-document regexp("^https?://bangumi.bilibili.com/(.*)/play#(.*)"), regexp("^https?://www.bilibili.com/bangumi/play/(.*)") {
 /***************************视频播放界面(bangumi)***************************/
-/***************************视频播放界面(bangumi)***************************/
+#bangumi_header{
+    padding: 20px 20px 25px 20px !important;
+}
 /*顶部承包*/
 .topview-sponsor{
     margin-top: 20px;
