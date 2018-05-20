@@ -4,7 +4,7 @@ html{
     background-color: transparent;
 }
 body {
-    background-image: url(https://res.hibikiii.com/bilibili/bg.jpg) !important;
+    background-image: url(https://res.lolicon.app/bilibili/bg.jpg) !important;
     background-position: center bottom !important;
     background-size: cover !important;
     background-attachment: fixed !important;
@@ -12,7 +12,7 @@ body {
 }
 @media screen and (max-width: 1650px){
     body{
-    		background-image: url(https://res.hibikiii.com/bilibili/bg_small.jpg) !important;
+    		background-image: url(https://res.lolicon.app/bilibili/bg_small.jpg) !important;
     }
 }
 body{
@@ -202,6 +202,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 #primary_menu .nav-menu > li:last-child:hover{
     transform: none;
 }
+/*人性化处理，sub-nav右对齐*/
 @media screen and (max-width: 1690px){
     #primary_menu .nav-menu .side-nav .sub-nav{
 	    left: auto !important;
@@ -461,7 +462,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .popularize-module .adpos:after{
     margin-top: 10px;
-    content: url(https://res.hibikiii.com/bilibili/index_neko.png);
+    content: url(https://res.lolicon.app/bilibili/index_neko.png);
     visibility: visible;
 }
 .popularize-module .adpos{
@@ -556,7 +557,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .back-top.icon:before{
     content: " ";
-    background-image: url(https://res.hibikiii.com/bilibili/arrowup1.png);
+    background-image: url(https://res.lolicon.app/bilibili/arrowup1.png);
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
@@ -684,7 +685,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     position: absolute;
     content: "";
     line-height: 28px;
-    background: url(https://res.hibikiii.com/bilibili/progress_bar_neko.png) no-repeat;
+    background: url(https://res.lolicon.app/bilibili/progress_bar_neko.png) no-repeat;
 }
 .bilibili-player-video-btn-send.bpui-button{
     overflow: hidden;
@@ -694,8 +695,8 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     content: "\e163";
     font-size: 20px;
     position: absolute;
-    left: -33px;
-    top: 0px;
+    right: 80px;
+    top: 5px;
     color: #FFF;
     line-height: 28px;
     transition: all 0.3s;
@@ -714,10 +715,10 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 @keyframes in_out_2
 {
-	 0% {left:-33px;}
-	 40% {left:19px;}
-	 60% {left:27px;}
-	 100% {left:73px;}
+	 0% {right:80px;}
+	 40% {right:36px;}
+	 60% {right:18px;}
+	 100% {right:-26px;}
 }
 /*你闪个毛（。*/
 .bilibili-player-video-float-panel{
@@ -733,7 +734,8 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .mode-webfullscreen .bilibili-player-auxiliary-area,
 .mode-fullscreen .bilibili-player-auxiliary-area{
-    right: 0;
+    position: absolute;
+    right: -300px;
     z-index: 100;
     transition: all 0.2s;
     display: inline-block !important;
@@ -742,7 +744,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .mode-webfullscreen .bilibili-player-auxiliary-area:before,
 .mode-fullscreen .bilibili-player-auxiliary-area:before{
-    content: url(https://res.hibikiii.com/bilibili/right-button.png);
+    content: url(https://res.lolicon.app/bilibili/right-button.png);
     position: fixed;
     top: calc(50% - 50px);
     height: 100px;
@@ -766,9 +768,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .mode-fullscreen .bilibili-player-auxiliary-area:hover:after{
     display: none !important;
 }
-.mode-webfullscreen .bilibili-player-auxiliary-area .bilibili-player-wraplist{
-    height: calc(100% - 92px);
-}
+.mode-webfullscreen .bilibili-player-auxiliary-area .bilibili-player-wraplist,
 .mode-webfullscreen .bilibili-player-filter-wrap.bilibili-player-danmaku{
     height: 100%;
 }
@@ -790,7 +790,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .mode-webfullscreen .bilibili-player-auxiliary-area:hover,
 .mode-fullscreen .bilibili-player-auxiliary-area:hover{
-    right: 300px;
+    right: 0;
     opacity: 1 !important;
     animation: none !important;
 }
@@ -1014,7 +1014,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     #app .bili-header-m.report-wrap-module + .bili-wrapper.clearfix,
 #app .bili-header-m.report-wrap-module + div + .bili-wrapper.clearfix/*new*/{
     	width: 1130px;
-	}
+	} 
     .l-wrapper {
 		width: 840px;
     }
@@ -1030,10 +1030,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .viewbox .upinfo{
     margin-top: 15px !important
 }
-/*播放器调整兼容*/
-.player-wrapper{
-    width: 1160px ;/*[[wideNo]]*/
-}
+/*播放器调整兼容，暂时移除*/
 .player-wrapper{
     width: 980px;
     margin: auto;
@@ -1045,335 +1042,9 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     margin-bottom: -60px !important;
 }
 /*arc-toolbar*/
-/*[[lat-r]]*/
-.arc-toolbar{
-    background-color: transparent !important;
-    border-style: none !important;
-    padding-top: 10px;
-    height: 409px;
-    width: 80px !important;
-    margin-left: 100% !important;
-    margin-bottom: -450px !important;
-    top: -449px;
-}
-.arc-toolbar:hover{
-    width: 200px !important;
-}
-.widescreen .arc-toolbar{
-    height: 484px;
-    top: -524px;
-}
-.arc-toolbar .b-icon-a,
-.arc-toolbar .bili-helper .t .icon,
-.bgray-btn-wrap .bgray-btn.show/*意见反馈*/{
-    display: none !important;
-}
-.widescreen .bgray-btn-wrap .bgray-btn.show{
-    display: none !important;
-}
-#adjust-player-config-btn/*播放器调整*/{
-    display: block !important;
-}
-/*share-tool-bar*/
-.arc-toolbar .share-tool-bar{
-    border-style: none !important;
-    height: 40px !important;
-    left: 20px;
-    width:0;
-}
-.arc-toolbar .share-tool-bar .drawer{
-    padding: 0;
-    width: 0;
-    overflow: hidden !important;
-}
-.arc-toolbar .share-tool-bar:hover{
-    width: 204px;
-}
-.arc-toolbar .share-tool-bar:hover .drawer{
-    width: auto;
-}
-.arc-toolbar .share-tool-bar .drawer{
-    height: 40px !important;
-}
-.arc-toolbar .share-tool-bar .arrow,
-.arc-toolbar .share-tool-bar:after{
-    display: none !important;
-}
-.arc-toolbar .share-box{
-    background-color: rgba(255, 255, 255, 0.95) !important;
-    border-radius: 10px !important;
-    top: -100% !important;
-    right: calc(100% + 40px) !important;
-    left: auto !important;
-}
-.arc-toolbar .share-tool-bar .share-btn-bar{
-    top: -1px;
-    height: 42px;
-    width: 0;
-    position: absolute;
-    overflow: hidden;
-    transition: all 0.2s;
-}
-.arc-toolbar .share-tool-bar:hover .share-btn-bar{
-    width: 180px;
-    padding-left: 5px;
-}
-.arc-toolbar .share-tool-bar .g-share-btn{
-    margin: 0 0 0 -42px !important;
-    transition: margin 0.22s;
-}
-.arc-toolbar .share-tool-bar .g-share-btn:first-of-type{
-    margin-left: 0 !important;
-}
-.arc-toolbar .share-tool-bar:hover .g-share-btn{
-    margin-left: 0 !important;
-}
-/*share-tool-bar_end*/
-.arc-toolbar .share-tool-bar:before,
-.arc-toolbar .fav .t:before,
-.arc-toolbar .app.initialized .t:before,
-.arc-toolbar .bili-helper .t:before,
-.arc-toolbar .watch-later .t:before{
-    font-family: 'Material Icons';
-    font-size: 43px;
-    position: absolute;
-    left: -27px;
-    top: -11px;
-    color: #FFF;
-    line-height: 62px;
-    text-indent: 8px;
-    width: 60px;
-    height: 60px;
-    background-color: #4879BD;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 7px;
-    transition: transform 0.3s;
-    z-index: 10;
-}
-.arc-toolbar .share-tool-bar:before{
-    content: "\e80d";
-}
-.arc-toolbar .fav .t:before{
-    content: "\e838";
-}
-.arc-toolbar .app.initialized .t:before{
-    content: "\e32c";
-}
-.arc-toolbar .bili-helper .t:before{
-    content: "\e869";
-}
-.arc-toolbar .watch-later .t:before{
-    content: "\e066";
-}
-.arc-toolbar .watch-later .t-right-top{
-    width: 80px;
-}
-.arc-toolbar .coin .t:before{
-    font-family: '黑体';
-    content: "币";
-    font-size: 35px;
-    position: absolute;
-    left: -27px;
-    top: -11px;
-    color: #FFF;
-    line-height: 62px;
-    text-align: center;
-    width: 60px;
-    height: 60px;
-    background-color: #4879BD;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 7px;
-    transition: transform 0.2s;
-    z-index: 10;
-}
-.arc-toolbar .t-right-top,
-.arc-toolbar .share-tool-bar .title{
-    line-height: 30px !important;
-    height: 30px !important;
-}
-.arc-toolbar .t,
-.arc-toolbar .share-tool-bar{
-    padding: 0 0 4px 0 !important;
-    margin-left: 20px !important;
-    background-color: #FFF;
-    border-radius: 0 22px 22px 0 !important;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px !important;
-    transition: all 0.2s;
-}
-.arc-toolbar .block .t .t-right{
-    width: 0 !important;
-    overflow: hidden;
-}
-.arc-toolbar .block:hover .t,
-.arc-toolbar .share-tool-bar:hover{
-    padding: 0 20px 4px 45px !important;
-}
-.arc-toolbar .block:hover .t .t-right{
-    width: auto !important;
-}
-.arc-toolbar .block{
-    overflow: visible !important;
-    height: 60px;
-    border-style: none !important;
-    box-shadow: none !important;
-    padding: 0 20px 0 20px !important;
-}
-.arc-toolbar .block:hover .t:before,
-.arc-toolbar .share-tool-bar:hover:before,
-.arc-toolbar .elecrank-btn:hover .elecrank-bg:before{
-    transform:scale(1.16);
-}
-.arc-toolbar .app.initialized:hover{
-    background-color: transparent !important;
-    border-style: none !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-}
-.arc-toolbar .app.initialized:after{
-    border-style: none !important;
-}
-.arc-toolbar .elecrank-btn{
-    background-color: #FFF !important;
-    border-style: none !important;
-    padding: 3px 0px 3px 0;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
-    border-radius: 0 22px 22px 0;
-    width: 0 !important;
-    position: absolute !important;
-    right: auto !important;
-    top: auto;
-    bottom: 0;
-    left: 40px;
-    transition: all 0.2s;
-}
-.arc-toolbar .elecrank-bg{
-    margin-left: 0;
-    left: -27px;
-    z-index: 10;
-    background-image: none !important;
-}
-.arc-toolbar .elecrank-btn span{
-    position: relative;
-    opacity: 0;
-    display: none !important;
-}
-.arc-toolbar .elecrank-btn:hover{
-    padding-left: 25px !important;
-    width: 120px !important;
-}
-.arc-toolbar .elecrank-btn:hover span{
-    display: block !important;
-    animation: go_out 0.2s forwards;
-}
-@keyframes go_out{
-    0% {opacity: 0;}
-    40% {opacity: 0;}
-    100% {opacity: 1;}
-}
-.arc-toolbar .elecrank-bg:before{
-    font-family: 'Material Icons';
-    content: "\e1a3";
-    font-size: 43px;
-    position: absolute;
-    left: 0px;
-    top: 9px;
-    color: #FFF;
-    line-height: 62px;
-    width: 60px;
-    height: 60px;
-    background-color: rgb(240,105,145);
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 7px;
-    transition: transform 0.3s;
-}
-.qr-code-box,
-.arc-toolbar .bili-helper .info{
-    background-color: rgba(255, 255, 255, 0.95) !important;
-    border-radius: 10px !important;
-    top: -100% !important;
-    right: 100% !important;
-    left: auto !important;
-}
-.arc-toolbar .bili-helper .info{
-    top: -205px !important;
-}
-/*按钮位置*/
-.arc-toolbar .share-tool-bar{
-    padding-left: 20px;
-    position: absolute;
-    top: 0;
-}
-.arc-toolbar .fav{
-    position: absolute;
-    top: 75px;
-}
-.arc-toolbar .coin{
-    position: absolute;
-    top: 150px;
-}
-.arc-toolbar .watch-later{
-    position: absolute;
-    top: 225px;
-}
-.arc-toolbar .app.initialized{
-    position: absolute;
-    top: 300px;
-}
-.arc-toolbar .bili-helper/*bilibili helper*/{
-    position: absolute;
-    top: 300px;
-}
-.widescreen .arc-toolbar .bili-helper{
-    top: 375px;
-}
-.arc-toolbar .elecrank-btn{
-    bottom: 0;
-}
-/*bug-fixed*/
-.arc-toolbar .block.fav:before{
-    content: none;
-}
-/*bilibili helper*/
-.arc-toolbar .bili-helper .t{
-    height: 40px;
-}
-.arc-toolbar .bili-helper .t:before{
-    font-size: 38px;
-    text-indent: 10px;
-}
-.fav-wnd{
-    left: auto !important;
-    right: 200px !important;
-}
-.m-layer.m_layer.m-button.m-coin{
-    margin-left: -350px;
-    margin-top: -200px;
-    background-color: rgba(255, 255, 255, 0.95);
-}
-/*优化div范围*/
-.arc-toolbar .share-box:before{
-    content: " ";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    z-index: -999;
-}
-.arc-toolbar .qr-code-box-inner:before{
-    content: " ";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    z-index: -999;
-}
-/*bug-fix*/
-@media screen and (max-width: 1400px){
-    .arc-toolbar .block{
-        margin-left:0
-    }
+/*[[lat-none]]*/
+.widescreen .player-wrapper{
+    margin-bottom: 0 !important;
 }
 /*比赛视频信息*/
 .inside-wrp{
@@ -1483,7 +1154,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     background-image: none !important;
 }
 .no-list-icon:after{
-    content: url(https://res.hibikiii.com/bilibili/charge_neko.png);
+    content: url(https://res.lolicon.app/bilibili/charge_neko.png);
 }
 /*大家围观的直播*/
 .pop-live,/*new*/
@@ -1510,7 +1181,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 /*notfound*/
 .b-page-body .z-msg-box .bg{
-    background-image: url(https://res.hibikiii.com/bilibili/notfound.png);
+    background-image: url(https://res.lolicon.app/bilibili/notfound.png);
 }
 /*360chrome bug*/
 .a_layer .bg .arrow.arrow_r{
@@ -1538,7 +1209,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .pic-wrapper,
 .t-sponsor-img{
-    background-image: url(https://res.hibikiii.com/bilibili/topview-sponsor.png) !important;
+    background-image: url(https://res.lolicon.app/bilibili/topview-sponsor.png) !important;
     background-size: contain;
     width: 150px !important;
     height: 110px !important;
@@ -1598,7 +1269,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .sponsor-right-area > .img-wrapper,
 .sponsor-tosponsor-img{
-    background-image: url(https://res.hibikiii.com/bilibili/chengbao.png) !important;
+    background-image: url(https://res.lolicon.app/bilibili/chengbao.png) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -2007,16 +1678,12 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .movie-item{
     background-color: rgba(255,255,255,0.9) !important;
     padding: 0 15px 0 102px !important;
-    margin: 15px 0 15px 0 !important;
+    margin: 15px 0 15px 0;
     width: auto !important;
     border-radius: 10px;
     border-style: none !important;
     box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
     transition: all 0.3s;
-}
-.bangumi-wrap .synthetical,
-.bangumi-list .synthetical{
-    padding-bottom: 5px !important;
 }
 .synthetical .left-img{
     overflow: hidden;
@@ -2025,11 +1692,12 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .movie-item .left-img{
     top: 0 !important;
     border-radius: 10px 0 0 10px !important;
+    z-index: 1;
 }
 .synthetical .right-info{
     padding-top: 8px !important;
 }
-.synthetical .right-info .headline{
+.synthetical :not(.cardBangumibox) .right-info .headline{
     margin-bottom: -5px !important;
 }
 .synthetical .right-info .headline .title{
@@ -2039,7 +1707,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     margin-top: 11px !important;
     margin-bottom: -3px !important;
 }
-.synthetical .right-info .des{
+.synthetical :not(.cardBangumibox) .right-info .des{
     width: auto !important;
     margin-top: 12px !important;
     margin-bottom: 0 !important;
@@ -2079,6 +1747,18 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .synthetical .list:hover span{
     transition: all 0.2s;
     color: #FFFFFF !important;
+}
+.synthetical .cardBangumibox .right-info > .nav{
+    margin-top: -10px;
+}
+.synthetical .cardBangumibox .right-info > .info-items{
+    margin-top: -4px;
+}
+.synthetical .cardBangumibox .right-info > .score{
+    right: 20px;
+}
+.bangumi-list > .synthetical{
+    margin: 25px 0 25px 0;
 }
 /*影视*/
 .movie-item .right-info{
@@ -2452,7 +2132,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     background-color: rgba(255,255,255,1) !important;
 }
 .no-data{
-    background-image: url(https://res.hibikiii.com/bilibili/noresult.png) !important;
+    background-image: url(https://res.lolicon.app/bilibili/noresult.png) !important;
     text-align: center !important;
     margin-left: 272px !important;
 }
@@ -2461,7 +2141,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 1px;
     background-color: rgba(255,255,255,0.9) !important;
-    background-image: url(https://res.hibikiii.com/bilibili/noresult.png);
+    background-image: url(https://res.lolicon.app/bilibili/noresult.png);
     background-position: right bottom !important;
     background-repeat: no-repeat !important;
     transition: background-color 0.3s;
@@ -2490,7 +2170,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 .config-page.clearfix .config-content{
     background-color: rgba(249,249,249,0.6) !important;
-    background-image: url(https://res.hibikiii.com/bilibili/setting.png);
+    background-image: url(https://res.lolicon.app/bilibili/setting.png);
     background-position: 90% 95% !important;
     background-repeat: no-repeat !important;
 }
@@ -2508,7 +2188,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     display: none !important;
 }
 .sponsor-tosponsor-img{
-    background-image: url(https://res.hibikiii.com/bilibili/chengbao.png);
+    background-image: url(https://res.lolicon.app/bilibili/chengbao.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
