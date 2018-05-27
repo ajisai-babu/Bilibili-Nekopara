@@ -772,11 +772,8 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 .mode-webfullscreen .bilibili-player-filter-wrap.bilibili-player-danmaku{
     height: 100%;
 }
-.mode-webfullscreen .bilibili-player-danmaku-wrap.mCustomScrollbar._mCS_3.mCS-autoHide{
+.mode-webfullscreen .bilibili-player-danmaku-wrap{
     height: calc(100% - 71px) !important;
-}
-.mode-webfullscreen .bilibili-player-panel-scrollbar.mCustomScrollbar._mCS_6.mCS-autoHide{
-    height: 100% !important;
 }
 .mode-webfullscreen .bilibili-player-auxiliary-area:before{
     top: calc(50% - 50px - 34px);
@@ -1022,6 +1019,10 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     	margin-right: 10px;
 	}
 }
+/*msg*/
+.bili-msg.show iframe{
+    display: none;
+}
 }
 
 @-moz-document regexp("^https?://www.bilibili.com/video/av\\d(.*)"), regexp("^https?://www.bilibili.com/watchlater/#/av(.*)") {
@@ -1053,7 +1054,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
     border-radius: 15px !important;
     box-shadow: rgb(221, 221, 221) 0px 0px 10px 1px !important;
     transition: background-color 0.3s;
-    margin: 0 0 30px 0 !important;
+    /*margin: 0 0 30px 0 !important;*/
 }
 /*视频简介*/
 .v_info,
@@ -2196,7 +2197,7 @@ body:not(.widescreen) .nav-menu .m-i.side-nav .i_num{
 }
 }
 
-@-moz-document regexp("^https?://message.bilibili.com/pages/nav/index"), regexp("^https?://t.bilibili.com/pages/nav/index") {
+@-moz-document regexp("^https?://message.bilibili.com/pages/nav/index"), regexp("^https?://t.bilibili.com/pages/nav/index"), regexp("^https?://t.bilibili.com/share/card/.*") {
 body{
     background-image: none !important;
 }
